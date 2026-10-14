@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --font-garamond: 'EB Garamond', serif;
+}
+
+:root {
+    font-family: "Manrope", sans-serif;
+    color: #eeeeee;
+    background: #1d2921;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: #1d2921;
+    scroll-behavior: auto;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+}
+
+::selection {
+    color: #1d2921;
+    background: #c3c9a6;
+}
+
+/* =====================================
+   ANIMATED BACKGROUND
+===================================== */
+
+.intro-gradient {
+    background: linear-gradient(
+        125deg,
+        #211a17 0%,
+        #3b3428 22%,
+        #465443 48%,
+        #263e32 70%,
+        #171f1b 100%
+    );
+
+    background-size: 300% 300%;
+    background-position: 0% 50%;
+    will-change: background-position;
+}
+
+.gradient-glow {
+    position: absolute;
+    width: min(75vw, 650px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    will-change: transform;
+}
+
+.glow-one {
+    top: -30%;
+    left: -20%;
+    background: #8b674c;
+    opacity: 0.19;
+}
+
+.glow-two {
+    right: -25%;
+    bottom: -35%;
+    background: #75916a;
+    opacity: 0.2;
+}
+
+/* =====================================
+   GRAIN TEXTURE
+===================================== */
+
+.grain-overlay {
+    opacity: 0.17;
+    mix-blend-mode: soft-light;
+    will-change: opacity;
+}
+
+/* =====================================
+   INTRO WORDS
+===================================== */
+
+.intro-word {
+    display: inline-block;
+    opacity: 0;
+    transform: scale(0.65);
+    transform-origin: center center;
+    will-change: transform, opacity;
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 640px) {
+    .gradient-glow {
+        filter: blur(75px);
+        width: 100vw;
+    }
+
+    .grain-overlay {
+        opacity: 0.13;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+    }
+}

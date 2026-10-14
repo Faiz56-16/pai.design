@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#101b20">
+  <meta name="description" content="Sebuah perjalanan untuk menemukan makna.">
+
+  <title>Menemukan Makna — Islamic Experience</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="m-0 bg-[#101b20] font-sans text-[#e8eeeb] antialiased">
+
+  <!-- MAIN PAGE -->
+  <main id="main-page" class="relative flex min-h-screen flex-col">
+
+    <!-- BURGER (open + close) -->
+    <nav class="pointer-events-none fixed left-0 top-0 z-50 bg-transparent px-5 py-5 sm:px-10 sm:py-8 lg:px-16">
+      <button id="burger-btn" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-overlay"
+        class="pointer-events-auto flex h-11 w-11 items-center justify-center bg-transparent">
+        <span class="relative block h-5 w-6">
+          <span id="burger-line-1" class="absolute left-0 top-0 h-[1.5px] w-6 rounded-full bg-[#e8eeeb]"></span>
+          <span id="burger-line-2" class="absolute left-0 top-[9px] h-[1.5px] w-4 rounded-full bg-[#a8c8b8]"></span>
+          <span id="burger-line-3" class="absolute left-0 top-[18px] h-[1.5px] w-6 rounded-full bg-[#e8eeeb]"></span>
+        </span>
+      </button>
+    </nav>
+
+    <!-- BACKDROP -->
+    <div id="menu-backdrop" class="pointer-events-none fixed inset-0 z-30 bg-black/25"></div>
+
+    <!-- MENU PANEL -->
+    <div id="menu-overlay" aria-hidden="true" class="pointer-events-none fixed left-0 top-0 z-40
+         flex h-[100dvh] w-full flex-col overflow-hidden
+         bg-[#1d2921]/70
+         px-6 pt-1 pb-[max(1.5rem,env(safe-area-inset-bottom))]
+         backdrop-blur-xl backdrop-saturate-150
+         sm:w-[26rem] sm:border-r sm:border-white/10
+         sm:px-8 sm:pt-8">
+
+      <div class="mt-[70px] flex-1 flex-col justify-center">
+        <p class="mb-3 font-serif text-sm italic text-white/40">
+          Explore the journey
+        </p>
+        <ul class="flex flex-col gap-[clamp(0.125rem,1.2dvh,0.75rem)]">
+
+          <li>
+            <a href="#chapter-1"
+              class="menu-item group relative flex items-center gap-3 py-[clamp(0.375rem,1.2dvh,0.625rem)] font-serif text-[clamp(1.25rem,3.6dvh,1.875rem)] leading-tight text-white/70 transition-colors duration-300 hover:text-[#a8c8b8] active:text-[#a8c8b8] focus-visible:text-[#a8c8b8] focus-visible:outline-none">
+              <span
+                class="w-6 shrink-0 font-sans text-[10px] tracking-widest text-white/30 transition-colors duration-300 group-hover:text-[#a8c8b8]">01</span>
+              <span class="min-w-0 flex-1 transition-transform duration-500 ease-out group-hover:translate-x-2">Chapter
+                1</span>
+              <span
+                class="-translate-x-3 text-base opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">↗</span>
+              <span
+                class="absolute bottom-0 left-0 h-px w-full origin-left scale-x-0 bg-[#a8c8b8]/40 transition-transform duration-500 ease-out group-hover:scale-x-100"></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#chapter-2"
+              class="menu-item group relative flex items-center gap-3 py-[clamp(0.375rem,1.2dvh,0.625rem)] font-serif text-[clamp(1.25rem,3.6dvh,1.875rem)] leading-tight text-white/70 transition-colors duration-300 hover:text-[#a8c8b8] active:text-[#a8c8b8] focus-visible:text-[#a8c8b8] focus-visible:outline-none">
+              <span
+                class="w-6 shrink-0 font-sans text-[10px] tracking-widest text-white/30 transition-colors duration-300 group-hover:text-[#a8c8b8]">02</span>
+              <span class="min-w-0 flex-1 transition-transform duration-500 ease-out group-hover:translate-x-2">Chapter
+                2</span>
+              <span
+                class="-translate-x-3 text-base opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">↗</span>
+              <span
+                class="absolute bottom-0 left-0 h-px w-full origin-left scale-x-0 bg-[#a8c8b8]/40 transition-transform duration-500 ease-out group-hover:scale-x-100"></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#chapter-3"
+              class="menu-item group relative flex items-center gap-3 py-[clamp(0.375rem,1.2dvh,0.625rem)] font-serif text-[clamp(1.25rem,3.6dvh,1.875rem)] leading-tight text-white/70 transition-colors duration-300 hover:text-[#a8c8b8] active:text-[#a8c8b8] focus-visible:text-[#a8c8b8] focus-visible:outline-none">
+              <span
+                class="w-6 shrink-0 font-sans text-[10px] tracking-widest text-white/30 transition-colors duration-300 group-hover:text-[#a8c8b8]">03</span>
+              <span class="min-w-0 flex-1 transition-transform duration-500 ease-out group-hover:translate-x-2">Chapter
+                3</span>
+              <span
+                class="-translate-x-3 text-base opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">↗</span>
+              <span
+                class="absolute bottom-0 left-0 h-px w-full origin-left scale-x-0 bg-[#a8c8b8]/40 transition-transform duration-500 ease-out group-hover:scale-x-100"></span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+    <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+    <section
+      class="relative z-10 flex min-h-screen w-full items-center justify-center overflow-hidden px-6 pt-24 pb-20 text-center sm:px-10">
+
+      <!-- VIDEO BACKGROUND -->
+      <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 -z-10 h-full w-full object-cover">
+        <source src="/src/assets/video/hero.webm" type="video/webm">
+      </video>
+
+      <!-- DARK OVERLAY -->
+      <div class="absolute inset-0 -z-10 bg-[#0e1712]/50"></div>
+
+      <!-- HERO CONTENT -->
+      <div class="relative z-10 mx-auto w-full max-w-5xl">
+        <h1 class="font-garamond text-[100px] font-normal leading-[0.95] tracking-[-0.045em]">
+          <span class="block">Menemukan</span>
+          <span class="mt-2 block italic text-[#a8c8b8]">
+            makna hidup.
+          </span>
+        </h1>
+
+        <p class="mx-auto mt-7 max-w-md font-intertext-xs leading-7 text-white/70 sm:mt-9 sm:text-sm sm:leading-8">
+          Mengajak mahasiswa memahami cara menyikapi informasi yang belum jelas, menghindari penyebaran tuduhan, dan
+          menjaga toleransi ketika menemukan perbedaan pendapat atau keyakinan.
+        </p>
+
+        <a href="#journey"
+          class="group mt-9 inline-flex items-center gap-4 rounded-full border border-white/20 px-6 py-3.5 text-xs tracking-wide text-white/90 transition duration-500 hover:border-[#a8c8b8]/60 hover:bg-white/5 sm:mt-11">
+          Mulai perjalanan
+          <span class="transition-transform duration-500 group-hover:translate-x-1">→</span>
+        </a>
+      </div>
+    </section>
+    <div id="intro"
+    class="fixed inset-0 z-50 flex min-h-[100svh] items-center justify-center overflow-hidden bg-[#1d2921] px-6 text-center">
+
+    <!-- ANIMATED GRADIENT -->
+    <div class="intro-gradient absolute inset-0"></div>
+
+    <!-- SOFT COLOR GLOW -->
+    <div class="pointer-events-none absolute inset-0 overflow-hidden">
+      <div class="gradient-glow glow-one"></div>
+      <div class="gradient-glow glow-two"></div>
+
+      <!-- VIGNETTE -->
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_5%,#11171380_100%)]"></div>
+    </div>
+
+    <!-- ANIMATED GRAIN -->
+    <svg class="grain-overlay pointer-events-none absolute inset-0 h-full w-full" xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true">
+
+      <filter id="grain-filter">
+        <feTurbulence id="grain-turbulence" type="fractalNoise" baseFrequency="0.85" numOctaves="3"
+          stitchTiles="stitch" />
+
+        <feColorMatrix type="saturate" values="0" />
+
+        <feComponentTransfer>
+          <feFuncA type="table" tableValues="0 0.2" />
+        </feComponentTransfer>
+      </filter>
+
+      <rect width="100%" height="100%" filter="url(#grain-filter)" />
+    </svg>
+
+    <!-- CONTENT -->
+    <div class="relative z-10 mx-auto w-full max-w-5xl">
+
+
+      <h1 id="intro-title"
+        class="mx-auto max-w-2xl text-center font-garamond text-[#eeeeee] text-[clamp(1.35rem,3.2vw,2.4rem)] font-normal leading-[1.4] tracking-normal [word-spacing:0]"
+        aria-label="Setiap perjalanan dimulai dari sebuah makna, dan makna itu tumbuh perlahan dalam setiap langkah yang kita pilih dengan sepenuh hati.">
+      </h1>
+
+      <p id="intro-label" class="mt-10 text-xs uppercase tracking-[0.35em] text-[#c3c9a6]/70 opacity-0">
+        Prolog
+      </p>
+
+
+
+    </div>
+  </div>
+  </main>
+
+  <script type="module" src="./src/js/main.js"></script>
+  <script type="module" src="./src/js/navbar.js"></script>
+</body>
+
+</html>
