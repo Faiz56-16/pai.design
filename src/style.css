@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Serif+Display&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-inter: 'Inter', sans-serif;
-  --font-garamond: 'EB Garamond', serif;
+    --font-inter: 'Inter', sans-serif;
+    --font-garamond: 'EB Garamond', serif;
+    --font-instrument: 'Instrument Serif', serif;
 }
 
 :root {
@@ -40,14 +42,12 @@ body {
 ===================================== */
 
 .intro-gradient {
-    background: linear-gradient(
-        125deg,
-        #211a17 0%,
-        #3b3428 22%,
-        #465443 48%,
-        #263e32 70%,
-        #171f1b 100%
-    );
+    background: linear-gradient(125deg,
+            #211a17 0%,
+            #3b3428 22%,
+            #465443 48%,
+            #263e32 70%,
+            #171f1b 100%);
 
     background-size: 300% 300%;
     background-position: 0% 50%;
@@ -116,9 +116,158 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
         scroll-behavior: auto !important;
     }
 }
+
+/* HERO */
+
+/* Cursor-following light that reveals the video beneath the dark overlay */
+.hero-section {
+    --mx: 70%;
+    --my: 40%;
+}
+
+.hero-spotlight {
+    background: radial-gradient(520px circle at var(--mx) var(--my),
+            rgba(168, 200, 184, 0.16), rgba(168, 200, 184, 0.05) 40%, transparent 70%);
+    mix-blend-mode: screen;
+}
+
+.hero-vignette {
+    background:
+        linear-gradient(to right, rgba(9, 17, 13, .92) 0%, rgba(9, 17, 13, .55) 45%, rgba(9, 17, 13, .15) 100%),
+        linear-gradient(to top, rgba(9, 17, 13, .9) 0%, transparent 40%),
+        linear-gradient(to bottom, rgba(9, 17, 13, .55) 0%, transparent 25%);
+}
+
+.hero-mask {
+    overflow: hidden;
+    padding-bottom: .08em;
+    margin-bottom: -.08em;
+}
+
+.hero-char {
+    display: inline-block;
+    will-change: transform;
+}
+
+.scroll-line {
+    transform-origin: top;
+    animation: scrollLine 2.4s cubic-bezier(.7, 0, .3, 1) infinite;
+}
+
+@keyframes scrollLine {
+    0% {
+        transform: scaleY(0);
+    }
+
+    50% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+
+    51% {
+        transform-origin: bottom;
+    }
+
+    100% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-line {
+        animation: none;
+    }
+}
+
+/* ================= FACTS EDITORIAL ================= */
+
+#section-facts {
+    isolation: isolate;
+}
+
+.fact-row {
+    transition:
+        border-color 0.5s ease,
+        padding-left 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fact-row:hover {
+    border-color: rgba(168, 200, 184, 0.45);
+}
+
+.fact-row:hover .fact-symbol {
+    transform: rotate(45deg);
+}
+
+.fact-row:hover .fact-number {
+    color: #a8c8b8;
+}
+
+.fact-row:hover .fact-progress {
+    width: 100%;
+}
+
+.fact-progress {
+    transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fact-content h3 {
+    text-wrap: pretty;
+}
+
+@media (min-width: 640px) {
+    .fact-row:hover {
+        padding-left: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fact-row,
+    .fact-progress,
+    .fact-symbol {
+        transition: none !important;
+    }
+}
+
+/* test */
+
+/* GLASS NAVIGATION */
+.nav-glass {
+    background: rgba(29, 41, 33, 0.48);
+    border: 1px solid rgba(198, 217, 202, 0.2);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* NEXT BUTTON */
+.nav-next {
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* CHAPTER MENU OPEN */
+#chapter-menu.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* BURGER TRANSITION */
+#chapter-menu-button.is-open #burger-line-1 {
+    transform: translateY(3px) rotate(45deg);
+}
+
+#chapter-menu-button.is-open #burger-line-2 {
+    width: 20px;
+    transform: translateY(-3px) rotate(-45deg);
+}
+/* ULO */
+    

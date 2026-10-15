@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menemukan Makna — Islamic Experience</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="bg-[#2a241c] text-[#f4eedf] font-inter selection:bg-[#a8c8b8] selection:text-[#1a1814] overflow-x-hidden">
+
+    <div id="chapter-transition"
+        class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#eeeeee] text-[#242820]">
+        <div class="flex w-full items-center justify-between gap-8 px-8 sm:px-16 lg:px-24">
+            <span class="chapter-number font-serif text-[clamp(7rem,20vw,18rem)] leading-none">
+                I
+            </span>
+
+            <div class="max-w-xl">
+                <p class="chapter-label mb-5 text-xs tracking-[0.3em]">
+                    CHAPTER / I
+                </p>
+
+                <h2 class="chapter-title font-serif text-4xl sm:text-6xl lg:text-8xl">
+                    Permasalahan
+                </h2>
+
+                <div class="chapter-line mt-8 h-px w-0 bg-[#242820]"></div>
+            </div>
+        </div>
+    </div>
+    <!-- NAVIGASI FIXED -->
+    <nav id="chapter-navigation"
+        class="fixed inset-x-0 bottom-0 z-[100] flex items-center justify-between px-5 pb-6 pt-4 sm:px-10 sm:pb-8">
+
+        <!-- KEMBALI -->
+        <a href="index.html" aria-label="Kembali"
+            class="nav-glass group flex h-12 w-12 items-center justify-center rounded-full text-[#dce9df] transition-all duration-300 hover:-translate-x-1 hover:border-[#a8c8b8]/60 hover:bg-[#a8c8b8]/15 sm:h-14 sm:w-14">
+            <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5">
+                <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </a>
+
+        <!-- NEXT CHAPTER -->
+        <a href="chapter2.html"
+            class="nav-next group relative inline-flex items-center gap-5 overflow-hidden rounded-full px-6 py-4 text-xs font-medium tracking-wide text-[#20352a] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(168,200,184,0.2)] sm:px-8">
+
+            <span class="absolute inset-0 bg-[#c6d9ca] transition-colors duration-500 group-hover:bg-[#e0ebe1]"></span>
+
+            <span class="relative">Lanjutkan perjalanan</span>
+        </a>
+
+        <!-- BURGER / SKIP CHAPTER -->
+        <button id="chapter-menu-button" type="button" aria-label="Buka daftar chapter" aria-expanded="false"
+            aria-controls="chapter-menu"
+            class="nav-glass group flex h-12 w-12 items-center justify-center rounded-full text-[#dce9df] transition-all duration-300 hover:border-[#a8c8b8]/60 hover:bg-[#a8c8b8]/15 sm:h-14 sm:w-14">
+
+            <span class="relative flex h-4 w-5 flex-col justify-center gap-[5px]">
+                <span id="burger-line-1" class="block h-px w-5 bg-current transition-all duration-300"></span>
+                <span id="burger-line-2" class="block h-px w-3 self-end bg-current transition-all duration-300"></span>
+            </span>
+        </button>
+    </nav>
+
+    <div id="scroll-progress" class="pointer-events-none fixed inset-x-0 top-0 z-[110] h-[3px] bg-[#a8c8b8]"></div>
+    <!-- CHAPTER MENU -->
+    <div id="chapter-menu"
+        class="pointer-events-none fixed bottom-24 right-5 z-[99] w-[min(19rem,calc(100vw-2.5rem))] translate-y-3 rounded-2xl border border-[#a8c8b8]/15 bg-[#1d2921]/80 p-5 text-[#eeeeee] opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-300 sm:bottom-28 sm:right-10">
+
+        <div class="mb-4 border-b border-white/10 pb-4">
+            <p class="text-[10px] uppercase tracking-[0.25em] text-[#a8c8b8]/70">
+                Explore the journey
+            </p>
+            <h3 class="mt-2 font-instrument text-2xl">
+                Daftar chapter
+            </h3>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="chapter1.html"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>01 — Pendahuluan</span>
+                <span>↗</span>
+            </a>
+
+            <a href="chapter2.html"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>02 — Informasi</span>
+                <span>↗</span>
+            </a>
+
+            <a href="chapter3.html"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>03 — Toleransi</span>
+                <span>↗</span>
+            </a>
+
+            <a href="chapter4.html"
+                class="chapter-link flex items-center justify-between py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>04 — Penutup</span>
+                <span>↗</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- AMBIENT BACKGROUND GLOW -->
+    <div
+        class="pointer-events-none fixed -right-20 -top-20 z-0 h-[500px] w-[500px] rounded-full bg-[#a8c8b8]/10 blur-[140px]">
+    </div>
+    <div
+        class="pointer-events-none fixed -left-20 top-1/2 z-0 h-[500px] w-[500px] rounded-full bg-[#2f5a45]/20 blur-[140px]">
+    </div>
+
+    <main id="problem" class="relative z-10 py-16 lg:py-24 space-y-32 sm:space-y-44">
+
+        <!-- ================= SECTION 1: HERO ================= -->
+        <section id="section-hero" class="text-center">
+            <h1 class="gsap-hero font-instrument text-[160px] leading-[0.95] tracking-tight text-[#eeeeee]">
+                Pesan yang menjadi konflik.
+            </h1>
+        </section>
+
+
+        <!-- ================= SECTION 2: VIDEO REFLECTION ================= -->
+        <section id="section-video" class="p-6 grid lg:grid-cols-10 gap-8 lg:gap-12 items-center w-full">
+
+            <!-- GAMBAR KIRI: LEBIH RENDAH -->
+            <div class="lg:mt-0 lg:col-span-4 lg:translate-y-[400px] overflow-hidden bg-white">
+                <div class="overflow-hidden group">
+                    <img class="w-full h-[500px] sm:h-[650px] lg:h-[800px] object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="./src/assets/img/internet.jpg" alt="Gambar Internet">
+                </div>
+            </div>
+
+            <!-- TEKS KANAN -->
+            <div class="gsap-video-text lg:col-span-5 lg:col-start-6 space-y-6">
+                <p class="font-instrument text-[32px] sm:text-[32px] lg:text-[32px] leading-relaxed text-[#eeeeee]">
+                    Peristiwa ini bermula dari unggahan tangkapan layar potongan percakapan di grup media sosial yang
+                    mengklaim adanya penghinaan antarkelompok mahasiswa. Tanpa adanya sumber resmi atau konteks yang
+                    jelas, sebagian anggota langsung menyebarkan pesan tersebut ke grup lain disertai narasi
+                    menyudutkan. Tindakan ini memicu emosi massal, memicu perselisihan pertemanan di lingkungan kampus,
+                    dan merugikan pihak yang dituduh, hingga akhirnya keaslian dan kelengkapan bukti tersebut mulai
+                    diragukan.
+                </p>
+            </div>
+
+            <div class="lg:mt-0 lg:col-span-5 lg:col-start-6 lg:-translate-y-[160px] overflow-hidden bg-white">
+                <div class="overflow-hidden group">
+                    <img class="w-full h-[500px] sm:h-[650px] lg:h-[800px] object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="./src/assets/img/internet2.jpg" alt="Gambar Internet">
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ================= SECTION 3: FACTS ================= -->
+        <section id="section-facts" class="relative z-10 -mt-64 px-6 pb-12 space-y-8">
+            <div>
+                <h2 class="font-inter text-[16px] sm:text-[16px] lg:text-[16px] text-[#eeeeee] mt-1">FAKTA YANG
+                    DIKETAHUI
+                </h2>
+            </div>
+            <div class="gsap-video-text lg:col-span-5 lg:col-start-1 space-y-6">
+                <p class="font-instrument text-[35px] sm:text-[35px] lg:text-[35px] leading-relaxed text-[#eeeeee]">
+                    Peristiwa ini terjadi ketika sebuah informasi dibagikan ke media sosial tanpa disertai sumber asli
+                    maupun konteks yang cukup. Situasi kian memburuk saat sebagian anggota grup langsung menyebarkan
+                    ulang pesan tersebut sebelum sempat memeriksa kebenarannya. Penyebaran ini diiringi oleh munculnya
+                    komentar-komentar yang menyerang kelompok tertentu sehingga konflik menjadi semakin besar, padahal
+                    kebenaran isi pesan itu sendiri sebenarnya belum dapat dipastikan pada saat awal menyebar.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ================= SECTION 4: AFFECTED PARTIES ================= -->
+
+        <section id="card-section" class="relative flex h-screen items-center justify-center overflow-hidden">
+
+            <!-- EXPANDING OUTER CARD -->
+            <div id="expand-card"
+                class="relative flex h-[420px] w-[320px] shrink-0 flex-col justify-between overflow-hidden rounded-sm bg-white p-8 font-mono sm:h-[540px] sm:w-[800px] sm:p-12">
+
+                <!-- INTRO LAYER (visible before expand, fades out) -->
+                <div id="intro-layer" class="relative z-10 flex h-full flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] uppercase tracking-[0.25em] text-[#777067]">
+                            Dampak Sosial
+                        </span>
+                        <h2 class="mt-3 font-instrument text-center text-[35px] text-[#2a241c] sm:text-5xl">
+                            Siapa yang terdampak?
+                        </h2>
+                    </div>
+                    <p class="max-w-xs text-xs leading-5 text-[#2a241c]/60">
+                        Pahami dampaknya sebelum meneruskan informasi.
+                    </p>
+                </div>
+
+                <!-- STAGE (appears after expand) -->
+                <div id="inner-card-stage" class="pointer-events-none absolute inset-0 z-20 overflow-hidden">
+
+                    <!-- LEFT TICK RULER -->
+                    <div id="ticks-left" class="absolute left-5 top-1/2 hidden -translate-y-1/2 sm:block"></div>
+                    <!-- RIGHT TICK RULER -->
+                    <div id="ticks-right" class="absolute right-5 top-1/2 hidden -translate-y-1/2 sm:block"></div>
+
+
+                    <!-- CENTER: card viewport + fixed red bracket frame -->
+                    <div id="card-viewport"
+                        class="absolute left-1/2 top-1/2 h-[300px] w-[250px] -translate-x-1/2 -translate-y-1/2 sm:h-[435px] sm:w-[495px]">
+
+                        <!-- CARDS -->
+                        <article data-inner-card style="background-image:url('./src/assets/img/internet.jpg')"
+                            data-desc="Reputasi dan rasa aman dapat terganggu akibat tuduhan yang belum terbukti kebenarannya."
+                            class="absolute font-instrument inset-0 flex flex-col justify-between overflow-hidden bg-gradient-to-b from-[#6e7f6f] via-[#4a5f4e] to-[#26372c] p-5 text-[#eeeeee]">
+                            <div class="flex justify-between text-[10px] uppercase tracking-[0.2em] text-[#eeeeee]/70">
+                                <span>Dampak langsung</span><span>01</span>
+                            </div>
+                            <h3 class="font-instrument text-3xl sm:text-5xl">Pihak yang dituduh</h3>
+                            <div class="flex flex-col items-center gap-3">
+                                <span
+                                    class="bg-white/10 px-4 py-2 text-[11px] uppercase tracking-[0.15em] text-[#eeeeee]/60">[
+                                    Reputasi · Privasi ]</span>
+                            </div>
+                        </article>
+
+                        <article data-inner-card style="background-image:url('./src/assets/img/internet.jpg')"
+                            data-desc="Kabar yang belum terverifikasi bisa memengaruhi opini dan keputusan mahasiswa."
+                            class="absolute font-instrument inset-0 flex flex-col justify-between overflow-hidden bg-gradient-to-b from-[#8a8f78] via-[#566a5c] to-[#334438] p-5 text-[#eeeeee]">
+                            <div class="flex justify-between text-[10px] uppercase tracking-[0.2em] text-[#eeeeee]/70">
+                                <span>Dampak informasi</span><span>02</span>
+                            </div>
+                            <h3 class="font-instrument text-3xl sm:text-5xl">Penerima informasi</h3>
+                            <div class="flex flex-col items-center gap-3">
+                                <span
+                                    class="bg-white/10 px-4 py-2 text-[11px] uppercase tracking-[0.15em] text-[#eeeeee]/60">[
+                                    Opini · Persepsi ]</span>
+                            </div>
+                        </article>
+
+                        <article data-inner-card style="background-image:url('./src/assets/img/internet.jpg')"
+                            data-desc="Prasangka dapat merenggangkan hubungan dan mengurangi kepercayaan antar mahasiswa."
+                            class="absolute font-instrument inset-0 flex flex-col justify-between overflow-hidden bg-gradient-to-b from-[#a39a7a] via-[#6b6f55] to-[#41473a] p-5 text-[#eeeeee]">
+                            <div class="flex justify-between text-[10px] uppercase tracking-[0.2em] text-[#eeeeee]/70">
+                                <span>Dampak kolektif</span><span>03</span>
+                            </div>
+                            <h3 class="font-instrument text-3xl sm:text-5xl">Komunitas kampus</h3>
+                            <div class="flex flex-col items-center gap-3">
+                                <span
+                                    class="bg-white/10 px-4 py-2 text-[11px] uppercase tracking-[0.15em] text-[#eeeeee]/60">[
+                                    Relasi · Toleransi ]</span>
+                            </div>
+                        </article>
+
+                        <article data-inner-card style="background-image:url('./src/assets/img/internet.jpg')"
+                            data-desc="Tindakan menyebarkan tuduhan dapat merusak kredibilitas dan membawa konsekuensi sosial."
+                            class="absolute font-instrument inset-0 flex flex-col justify-between overflow-hidden bg-gradient-to-b from-[#b59a6a] via-[#7d6b48] to-[#514c3c] p-5 text-[#eeeeee]">
+                            <div class="flex justify-between text-[10px] uppercase tracking-[0.2em] text-[#eeeeee]/70">
+                                <span>Tanggung jawab</span><span>04</span>
+                            </div>
+                            <h3 class="font-instrument text-3xl sm:text-5xl">Penyebar informasi</h3>
+                            <div class="flex flex-col items-center gap-3">
+                                <span
+                                    class="bg-white/10 px-4 py-2 text-[11px] uppercase tracking-[0.15em] text-[#eeeeee]/60">[
+                                    Etika · Konsekuensi ]</span>
+                            </div>
+                        </article>
+
+                        <!-- RED CORNER BRACKETS (static frame) -->
+                        <span
+                            class="pointer-events-none absolute -left-2 -top-2 h-5 w-5 border-l border-t border-[#d93a12]"></span>
+                        <span
+                            class="pointer-events-none absolute -right-2 -top-2 h-5 w-5 border-r border-t border-[#d93a12]"></span>
+                        <span
+                            class="pointer-events-none absolute -bottom-2 -left-2 h-5 w-5 border-b border-l border-[#d93a12]"></span>
+                        <span
+                            class="pointer-events-none absolute -bottom-2 -right-2 h-5 w-5 border-b border-r border-[#d93a12]"></span>
+                    </div>
+
+                    <!-- RIGHT DESCRIPTION -->
+                    <p id="inner-desc"
+                        class="absolute bottom-16 left-1/2 w-[260px] -translate-x-1/2 text-center text-[11px] uppercase leading-6 tracking-[0.1em] text-[#555] sm:text-[13px] xl:bottom-auto xl:left-[calc(50%+247px+4rem)] xl:right-20 xl:top-1/2 xl:w-auto xl:-translate-y-1/2 xl:translate-x-0 xl:text-left">
+                    </p>
+
+                    <!-- COUNTER -->
+                    <span id="inner-card-counter" class="absolute bottom-6 right-8 text-xl text-[#2a241c]">01 /
+                        04</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= SECTION 5: WHY IT MATTERS ================= -->
+        <section id="section-why" class="space-y-8 p-6">
+            <p class="gsap-why-text font-instrument text-2xl sm:text-4xl lg:text-5xl leading-[1.25] text-[#eeeeee]">
+                Mahasiswa tidak hanya bertanggung jawab atas ucapan langsung, tetapi juga perlu mempertimbangkan
+                dampak
+                unggahan, komentar, dan pesan yang diteruskan.
+            </p>
+        </section>
+    </main>
+
+    <script type="module" src="./src/js/chapter1.js"></script>
+    <script type="module" src="./src/js/navbar.js"></script>
+    <script type="module" src="./src/js/loading.js"></script>
+</body>
+
+</html>

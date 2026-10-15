@@ -17,6 +17,27 @@
 
 <body class="m-0 bg-[#101b20] font-sans text-[#e8eeeb] antialiased">
 
+  <!-- CHAPTER TRANSITION -->
+  <div id="chapter-transition"
+    class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#eeeeee] text-[#242820]">
+    <div class="flex w-full items-center justify-between gap-8 px-8 sm:px-16 lg:px-24">
+      <span class="chapter-number font-serif text-[clamp(7rem,20vw,18rem)] leading-none">
+        I
+      </span>
+
+      <div class="max-w-xl">
+        <p class="chapter-label mb-5 text-xs tracking-[0.3em]">
+          CHAPTER / I
+        </p>
+
+        <h2 class="chapter-title font-serif text-4xl sm:text-6xl lg:text-8xl">
+          Permasalahan
+        </h2>
+
+        <div class="chapter-line mt-8 h-px w-0 bg-[#242820]"></div>
+      </div>
+    </div>
+  </div>
   <!-- MAIN PAGE -->
   <main id="main-page" class="relative flex min-h-screen flex-col">
 
@@ -51,7 +72,7 @@
         <ul class="flex flex-col gap-[clamp(0.125rem,1.2dvh,0.75rem)]">
 
           <li>
-            <a href="#chapter-1"
+             <a href="chapter1.html" data-chapter-transition data-chapter="I" data-chapter-title="Permasalahan"
               class="menu-item group relative flex items-center gap-3 py-[clamp(0.375rem,1.2dvh,0.625rem)] font-serif text-[clamp(1.25rem,3.6dvh,1.875rem)] leading-tight text-white/70 transition-colors duration-300 hover:text-[#a8c8b8] active:text-[#a8c8b8] focus-visible:text-[#a8c8b8] focus-visible:outline-none">
               <span
                 class="w-6 shrink-0 font-sans text-[10px] tracking-widest text-white/30 transition-colors duration-300 group-hover:text-[#a8c8b8]">01</span>
@@ -96,89 +117,130 @@
       </div>
     </div>
 
-    <!-- HERO SECTION WITH VIDEO BACKGROUND -->
-    <section
-      class="relative z-10 flex min-h-screen w-full items-center justify-center overflow-hidden px-6 pt-24 pb-20 text-center sm:px-10">
 
-      <!-- VIDEO BACKGROUND -->
-      <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 -z-10 h-full w-full object-cover">
+    <section id="hero"
+      class="hero-section relative isolate flex min-h-screen w-full flex-col justify-between overflow-hidden bg-[#0e1712] px-6 pb-10 pt-28 text-white sm:px-10 lg:px-16">
+
+      <!-- VIDEO -->
+      <video autoplay muted loop playsinline preload="auto"
+        class="hero-video absolute inset-0 -z-30 h-full w-full scale-110 object-cover">
         <source src="/src/assets/video/hero.webm" type="video/webm">
       </video>
 
-      <!-- DARK OVERLAY -->
-      <div class="absolute inset-0 -z-10 bg-[#0e1712]/50"></div>
+      <!-- OVERLAYS -->
+      <div class="hero-vignette absolute inset-0 -z-20"></div>
+      <div class="hero-spotlight pointer-events-none absolute inset-0 -z-10"></div>
 
-      <!-- HERO CONTENT -->
-      <div class="relative z-10 mx-auto w-full max-w-5xl">
-        <h1 class="font-garamond text-[100px] font-normal leading-[0.95] tracking-[-0.045em]">
-          <span class="block">Menemukan</span>
-          <span class="mt-2 block italic text-[#a8c8b8]">
-            makna hidup.
+      <!-- ORBIT (centered on the right, rotates slowly) -->
+      <div
+        class="hero-orbit pointer-events-none absolute right-[-18%] top-1/2 -z-10 aspect-square w-[75vw] max-w-[900px] -translate-y-1/2 rounded-full border border-white/[0.07]">
+        <div class="absolute inset-[12%] rounded-full border border-white/[0.05]"></div>
+        <span
+          class="absolute left-[14%] top-[22%] h-2 w-2 rounded-full bg-[#a8c8b8] shadow-[0_0_28px_6px_rgba(168,200,184,.55)]"></span>
+        <span class="absolute bottom-[18%] right-[16%] h-1.5 w-1.5 rounded-full bg-white/60"></span>
+      </div>
+
+      <!-- CURSOR LIGHT TRAIL -->
+      <canvas id="cursor-trail" class="pointer-events-none absolute inset-0 z-[5] h-full w-full"></canvas>
+
+      <!-- TOP: brand line -->
+      <div class="hero-top relative z-10 mx-auto flex w-full max-w-7xl items-center gap-4">
+        <span class="hero-rule h-px w-12 origin-left bg-[#a8c8b8]/70"></span>
+        <span class="font-inter text-xs text-white/60">Perjalanan memahami diri dan sesama</span>
+      </div>
+
+      <!-- HEADLINE -->
+      <div class="hero-content relative z-10 mx-auto w-full max-w-7xl py-10">
+        <h1 class="font-instrument font-normal leading-[0.88] tracking-[-0.05em] text-[clamp(3.6rem,11.5vw,10.5rem)]"
+          aria-label="Menemukan makna hidup.">
+          <span class="hero-mask block"><span class="hero-line block" data-split>Pahami Sebelum</span></span>
+          <span class="hero-mask block pl-[0.6em] sm:pl-[1.2em]">
+            <span class="hero-line block ml-[300px] mb-4 italic" data-split> Menghakimi.</span>
           </span>
         </h1>
+      </div>
 
-        <p class="mx-auto mt-7 max-w-md font-intertext-xs leading-7 text-white/70 sm:mt-9 sm:text-sm sm:leading-8">
-          Mengajak mahasiswa memahami cara menyikapi informasi yang belum jelas, menghindari penyebaran tuduhan, dan
-          menjaga toleransi ketika menemukan perbedaan pendapat atau keyakinan.
-        </p>
+      <!-- BOTTOM BAR -->
+      <div class="hero-bottom relative z-10 mx-auto w-full max-w-7xl">
+        <div class="hero-divider mb-8 h-px w-full origin-left bg-white/15"></div>
 
-        <a href="#journey"
-          class="group mt-9 inline-flex items-center gap-4 rounded-full border border-white/20 px-6 py-3.5 text-xs tracking-wide text-white/90 transition duration-500 hover:border-[#a8c8b8]/60 hover:bg-white/5 sm:mt-11">
-          Mulai perjalanan
-          <span class="transition-transform duration-500 group-hover:translate-x-1">→</span>
-        </a>
+        <div class="grid items-end gap-8 lg:grid-cols-[minmax(0,1fr)_auto_auto] lg:gap-12">
+
+          <p class="hero-description w-full max-w-xl font-inter text-sm leading-7 text-white/65">
+            Di tengah derasnya informasi dan beragamnya pandangan, belajar untuk
+            <span class="text-white">memahami sebelum menghakimi</span>,
+            menyaring sebelum membagikan, dan menghargai perbedaan.
+          </p>
+
+          <div class="hero-actions flex flex-wrap items-center gap-6">
+            <a href="chapter1.html" data-chapter-transition data-chapter="I" data-chapter-title="Permasalahan"
+              class="group relative inline-flex items-center gap-6 overflow-hidden rounded-full border border-[#a8c8b8]/50 px-7 py-4 font-inter text-xs tracking-wide transition-[border-color,box-shadow] duration-500 hover:border-[#a8c8b8] hover:shadow-[0_0_40px_rgba(168,200,184,0.2)]">
+
+              <span
+                class="absolute inset-0 -translate-x-full bg-[#a8c8b8]/15 transition-transform duration-700 group-hover:translate-x-0"></span>
+
+              <span class="relative">Mulai perjalanan</span>
+
+              <span
+                class="relative text-lg text-[#a8c8b8] transition-transform duration-500 group-hover:translate-x-2">→</span>
+            </a>
+          </div>
+
+        </div>
       </div>
     </section>
+
     <div id="intro"
-    class="fixed inset-0 z-50 flex min-h-[100svh] items-center justify-center overflow-hidden bg-[#1d2921] px-6 text-center">
+      class="fixed inset-0 z-50 flex min-h-[100svh] items-center justify-center overflow-hidden bg-[#1d2921] px-6 text-center">
 
-    <!-- ANIMATED GRADIENT -->
-    <div class="intro-gradient absolute inset-0"></div>
+      <!-- ANIMATED GRADIENT -->
+      <div class="intro-gradient absolute inset-0"></div>
 
-    <!-- SOFT COLOR GLOW -->
-    <div class="pointer-events-none absolute inset-0 overflow-hidden">
-      <div class="gradient-glow glow-one"></div>
-      <div class="gradient-glow glow-two"></div>
+      <!-- SOFT COLOR GLOW -->
+      <div class="pointer-events-none absolute inset-0 overflow-hidden">
+        <div class="gradient-glow glow-one"></div>
+        <div class="gradient-glow glow-two"></div>
 
-      <!-- VIGNETTE -->
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_5%,#11171380_100%)]"></div>
+        <!-- VIGNETTE -->
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_5%,#11171380_100%)]"></div>
+      </div>
+
+      <!-- ANIMATED GRAIN -->
+      <svg class="grain-overlay pointer-events-none absolute inset-0 h-full w-full" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+
+        <filter id="grain-filter">
+          <feTurbulence id="grain-turbulence" type="fractalNoise" baseFrequency="0.85" numOctaves="3"
+            stitchTiles="stitch" />
+
+          <feColorMatrix type="saturate" values="0" />
+
+          <feComponentTransfer>
+            <feFuncA type="table" tableValues="0 0.2" />
+          </feComponentTransfer>
+        </filter>
+
+        <rect width="100%" height="100%" filter="url(#grain-filter)" />
+      </svg>
+
+      <!-- CONTENT -->
+      <div class="relative z-10 mx-auto w-full max-w-5xl">
+
+
+        <h1 id="intro-title"
+          class="mx-auto max-w-2xl text-center font-garamond text-[#eeeeee] text-[clamp(1.35rem,3.2vw,2.4rem)] font-normal leading-[1.4] tracking-normal [word-spacing:0]"
+          aria-label="Setiap perjalanan dimulai dari sebuah makna, dan makna itu tumbuh perlahan dalam setiap langkah yang kita pilih dengan sepenuh hati.">
+        </h1>
+
+        <p id="intro-label" class="mt-10 text-xs uppercase tracking-[0.35em] text-[#c3c9a6]/70 opacity-0">
+          #FAIZBIJAK2026
+        </p>
+
+
+
+      </div>
     </div>
 
-    <!-- ANIMATED GRAIN -->
-    <svg class="grain-overlay pointer-events-none absolute inset-0 h-full w-full" xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true">
-
-      <filter id="grain-filter">
-        <feTurbulence id="grain-turbulence" type="fractalNoise" baseFrequency="0.85" numOctaves="3"
-          stitchTiles="stitch" />
-
-        <feColorMatrix type="saturate" values="0" />
-
-        <feComponentTransfer>
-          <feFuncA type="table" tableValues="0 0.2" />
-        </feComponentTransfer>
-      </filter>
-
-      <rect width="100%" height="100%" filter="url(#grain-filter)" />
-    </svg>
-
-    <!-- CONTENT -->
-    <div class="relative z-10 mx-auto w-full max-w-5xl">
-
-
-      <h1 id="intro-title"
-        class="mx-auto max-w-2xl text-center font-garamond text-[#eeeeee] text-[clamp(1.35rem,3.2vw,2.4rem)] font-normal leading-[1.4] tracking-normal [word-spacing:0]"
-        aria-label="Setiap perjalanan dimulai dari sebuah makna, dan makna itu tumbuh perlahan dalam setiap langkah yang kita pilih dengan sepenuh hati.">
-      </h1>
-
-      <p id="intro-label" class="mt-10 text-xs uppercase tracking-[0.35em] text-[#c3c9a6]/70 opacity-0">
-        Prolog
-      </p>
-
-
-
-    </div>
-  </div>
   </main>
 
   <script type="module" src="./src/js/main.js"></script>
