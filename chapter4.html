@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menemukan Makna — Islamic Experience</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="overflow-x-hidden bg-[#FAF9EE] font-inter text-[#2a241c] selection:bg-[#a8c8b8] selection:text-[#2a241c]">
+
+    <!-- CHAPTER TRANSITION -->
+    <div id="chapter-transition"
+        class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#eeeeee] text-[#2a241c]">
+
+        <div class="flex w-full items-center justify-between gap-8 px-8 sm:px-16 lg:px-24">
+            <span class="chapter-number font-serif text-[clamp(7rem,20vw,18rem)] leading-none">
+                IV
+            </span>
+
+            <div class="max-w-xl">
+                <p class="chapter-label mb-5 text-xs tracking-[0.3em]">
+                    CHAPTER / IV
+                </p>
+
+                <h2 class="chapter-title font-serif text-4xl sm:text-6xl lg:text-8xl">
+                    Refleksi
+                </h2>
+
+                <div class="chapter-line mt-8 h-px w-0 bg-[#2a241c]"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIXED NAVIGATION -->
+    <nav id="chapter-navigation"
+        class="fixed inset-x-0 bottom-0 z-[100] flex items-center justify-between px-5 pb-6 pt-4 sm:px-10 sm:pb-8">
+
+        <!-- BACK -->
+        <a href="index.html" aria-label="Kembali"
+            class="nav-glass group flex h-12 w-12 items-center justify-center rounded-full text-[#2a241c] transition-all duration-300 hover:-translate-x-1 hover:border-[#a8c8b8]/60 hover:bg-[#a8c8b8]/15 sm:h-14 sm:w-14">
+
+            <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5">
+                <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </a>
+
+        <!-- NEXT CHAPTER -->
+        <a href="chapter5.html" data-chapter-transition data-chapter="V" data-chapter-title="Solusi"
+            class="nav-next group relative inline-flex items-center gap-5 overflow-hidden rounded-full px-6 py-4 text-xs font-medium tracking-wide text-[#2a241c] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(168,200,184,0.2)] sm:px-8">
+
+            <span class="absolute inset-0 bg-[#2a241c] transition-colors duration-500 group-hover:bg-[#9AB17A]"></span>
+
+            <span class="relative z-10 text-[#eeeeee]">
+                Lanjutkan perjalanan
+            </span>
+        </a>
+
+        <!-- CHAPTER MENU BUTTON -->
+        <button id="chapter-menu-button" type="button" aria-label="Buka daftar chapter" aria-expanded="false"
+            aria-controls="chapter-menu"
+            class="nav-glass group flex h-12 w-12 items-center justify-center rounded-full text-[#2a241c] transition-all duration-300 hover:border-[#a8c8b8]/60 hover:bg-[#a8c8b8]/15 sm:h-14 sm:w-14">
+
+            <span class="relative flex h-4 w-5 flex-col justify-center gap-[5px]">
+                <span id="burger-line-1" class="block h-px w-5 bg-current transition-all duration-300"></span>
+                <span id="burger-line-2" class="block h-px w-3 self-end bg-current transition-all duration-300"></span>
+            </span>
+        </button>
+    </nav>
+
+    <!-- SCROLL PROGRESS -->
+    <div id="scroll-progress" class="pointer-events-none fixed inset-x-0 top-0 z-[110] h-[3px] bg-[#a8c8b8]">
+    </div>
+
+    <!-- CHAPTER MENU -->
+    <div id="chapter-menu"
+        class="pointer-events-none fixed bottom-24 right-5 z-[99] w-[min(19rem,calc(100vw-2.5rem))] translate-y-3 rounded-2xl border border-[#a8c8b8]/15 bg-[#1d2921]/90 p-5 opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-300 sm:bottom-28 sm:right-10">
+
+        <div class="mb-4 border-b border-white/10 pb-4">
+            <h3 class="mt-2 font-instrument text-2xl text-[#eeeeee]">
+                Daftar chapter
+            </h3>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="chapter1.html" data-chapter-transition data-chapter="I" data-chapter-title="Permasalahan"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/80 transition-colors hover:text-[#a8c8b8]">
+                <span>01 — Permasalahan</span>
+                <span>↗</span>
+            </a>
+
+            <a href="chapter2.html" data-chapter-transition data-chapter="II" data-chapter-title="Konsep PAI"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/80 transition-colors hover:text-[#a8c8b8]">
+                <span>02 — Konsep PAI</span>
+                <span>↗</span>
+            </a>
+
+            <a href="chapter3.html" data-chapter-transition data-chapter="III" data-chapter-title="Analisis"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/80 transition-colors hover:text-[#a8c8b8]">
+                <span>03 — Analisis</span>
+                <span>↗</span>
+            </a>
+
+
+            <a href="chapter4.html"  data-chapter-transition data-chapter="IV" data-chapter-title="Refleksi"
+                class="chapter-link flex items-center justify-between py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>04 — Refleksi</span>
+                <span>↗</span>
+            </a>
+              <a href="chapter5.html" data-chapter-transition data-chapter="V" data-chapter-title="Solusi"
+                class="chapter-link flex items-center justify-between py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>05 — Solusi</span>
+                <span>↗</span>
+            </a>
+            <a href="kelompok.html" data-chapter-transition data-chapter="VI" data-chapter-title="kelompok"
+                class="chapter-link flex items-center justify-between py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>06 — Kelompok</span>
+                <span>↗</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- AMBIENT BACKGROUND -->
+    <div
+        class="pointer-events-none fixed -right-20 -top-20 z-0 h-[500px] w-[500px] rounded-full bg-[#a8c8b8]/10 blur-[140px]">
+    </div>
+    <div
+        class="pointer-events-none fixed -left-20 top-1/2 z-0 h-[500px] w-[500px] rounded-full bg-[#2f5a45]/15 blur-[140px]">
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main id="problem" class="relative z-10 space-y-28 overflow-hidden py-16 sm:space-y-40 lg:py-24">
+
+        <!-- HERO -->
+        <section id="section-hero" class="quiz-reveal px-6 text-center sm:px-10">
+
+            <p class="mb-6 text-xs uppercase tracking-[0.35em] text-[#2a241c]">
+                Chapter IV / Reflection
+            </p>
+
+            <h1 class="font-instrument text-[clamp(4rem,12vw,10rem)] leading-[0.85] tracking-[-0.055em] text-[#2a241c]">
+                Uji <i>Pemahaman.</i>
+            </h1>
+
+            <p class="mx-auto mt-8 max-w-xl text-sm leading-7 text-[#2a241c] sm:text-base">
+                Sebelum menyebarkan informasi, berhenti sejenak.
+                Periksa kebenarannya, jaga akhlak, dan pikirkan dampaknya bagi orang lain.
+            </p>
+
+            <div class="mt-10 flex items-center justify-center gap-3 text-xs uppercase tracking-[0.2em] text-[#2a241c]">
+                <span class="h-px w-8 bg-[#a8c8b8]"></span>
+                05 Questions
+                <span class="h-px w-8 bg-[#a8c8b8]"></span>
+            </div>
+        </section>
+
+        <!-- QUIZ SECTION -->
+        <section id="quiz-section" class="px-5 sm:px-10 lg:px-20">
+            <div class="mx-auto max-w-5xl">
+
+                <!-- QUIZ HEADER -->
+                <div
+                    class="quiz-reveal mb-10 flex flex-wrap items-end justify-between gap-5 border-b border-[#2a241c]/20 pb-5">
+                    <div>
+                        <p class="mb-2 text-xs uppercase tracking-[0.25em] text-[#2a241c]">
+                            Bagian 01
+                        </p>
+
+                        <h2 class="font-instrument text-4xl text-[#2a241c] sm:text-6xl">
+                            Uji pemahaman
+                        </h2>
+                    </div>
+
+                    <p id="quiz-counter" class="text-sm text-[#2a241c]">
+                        0 dari 5 dijawab
+                    </p>
+                </div>
+
+                <!-- PROGRESS BAR -->
+                <div class="mb-12 h-1 w-full overflow-hidden bg-[#2a241c]/10">
+                    <div id="quiz-progress" class="h-full w-0 bg-[#78977c]"></div>
+                </div>
+
+                <form id="quiz-form" class="space-y-8">
+
+                    <!-- QUESTION 1 -->
+                    <article class="quiz-card border-b border-[#2a241c]/15 pb-8" data-question="0" data-correct="B">
+
+                        <div class="mb-5 flex items-start gap-4">
+                            <span class="font-instrument text-3xl text-[#2a241c]">01</span>
+
+                            <div>
+                                <p class="mb-2 text-xs uppercase tracking-[0.2em] text-[#2a241c]">
+                                    Tabayyun
+                                </p>
+
+                                <h3 class="text-lg font-medium leading-relaxed text-[#2a241c] sm:text-xl">
+                                    Kamu menerima tangkapan layar yang menuduh seorang mahasiswa melakukan sesuatu,
+                                    tetapi tidak ada sumber asli. Apa tindakan pertama yang paling tepat?
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-3 sm:ml-12">
+                            <button type="button" data-option="A" class="quiz-option">
+                                <span class="option-letter">A</span>
+                                <span>Langsung meneruskan ke semua grup</span>
+                            </button>
+
+                            <button type="button" data-option="B" class="quiz-option">
+                                <span class="option-letter">B</span>
+                                <span>Memeriksa sumber dan konteks sebelum mengambil kesimpulan</span>
+                            </button>
+
+                            <button type="button" data-option="C" class="quiz-option">
+                                <span class="option-letter">C</span>
+                                <span>Menambahkan komentar yang lebih keras</span>
+                            </button>
+
+                            <button type="button" data-option="D" class="quiz-option">
+                                <span class="option-letter">D</span>
+                                <span>Menganggapnya benar karena banyak yang membagikan</span>
+                            </button>
+                        </div>
+
+                        <p class="question-feedback mt-4 hidden text-sm leading-relaxed text-[#2a241c] sm:ml-12"></p>
+                    </article>
+
+                    <!-- QUESTION 2 -->
+                    <article class="quiz-card border-b border-[#2a241c]/15 pb-8" data-question="1" data-correct="A">
+
+                        <div class="mb-5 flex items-start gap-4">
+                            <span class="font-instrument text-3xl text-[#2a241c]">02</span>
+
+                            <div>
+                                <p class="mb-2 text-xs uppercase tracking-[0.2em] text-[#2a241c]">
+                                    Prinsip Islam
+                                </p>
+
+                                <h3 class="text-lg font-medium leading-relaxed text-[#2a241c] sm:text-xl">
+                                    Prinsip tabayyun paling erat berkaitan dengan tindakan berikut …
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-3 sm:ml-12">
+                            <button type="button" data-option="A" class="quiz-option">
+                                <span class="option-letter">A</span>
+                                <span>Memastikan informasi sebelum menyebarkannya</span>
+                            </button>
+
+                            <button type="button" data-option="B" class="quiz-option">
+                                <span class="option-letter">B</span>
+                                <span>Membalas komentar dengan hinaan</span>
+                            </button>
+
+                            <button type="button" data-option="C" class="quiz-option">
+                                <span class="option-letter">C</span>
+                                <span>Mengikuti pendapat mayoritas tanpa berpikir</span>
+                            </button>
+
+                            <button type="button" data-option="D" class="quiz-option">
+                                <span class="option-letter">D</span>
+                                <span>Menyebarkan kabar agar cepat viral</span>
+                            </button>
+                        </div>
+
+                        <p class="question-feedback mt-4 hidden text-sm leading-relaxed text-[#2a241c] sm:ml-12"></p>
+                    </article>
+
+                    <!-- QUESTION 3 -->
+                    <article class="quiz-card border-b border-[#2a241c]/15 pb-8" data-question="2" data-correct="C">
+
+                        <div class="mb-5 flex items-start gap-4">
+                            <span class="font-instrument text-3xl text-[#2a241c]">03</span>
+
+                            <div>
+                                <p class="mb-2 text-xs uppercase tracking-[0.2em] text-[#2a241c]">
+                                    Akhlak Digital
+                                </p>
+
+                                <h3 class="text-lg font-medium leading-relaxed text-[#2a241c] sm:text-xl">
+                                    Ketika tidak setuju dengan pendapat teman di media sosial, tindakan yang sesuai
+                                    dengan akhlak adalah …
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-3 sm:ml-12">
+                            <button type="button" data-option="A" class="quiz-option">
+                                <span class="option-letter">A</span>
+                                <span>Menyerang identitasnya</span>
+                            </button>
+
+                            <button type="button" data-option="B" class="quiz-option">
+                                <span class="option-letter">B</span>
+                                <span>Membuat julukan buruk</span>
+                            </button>
+
+                            <button type="button" data-option="C" class="quiz-option">
+                                <span class="option-letter">C</span>
+                                <span>Menyampaikan alasan dengan santun dan fokus pada isi pendapat</span>
+                            </button>
+
+                            <button type="button" data-option="D" class="quiz-option">
+                                <span class="option-letter">D</span>
+                                <span>Mengajak orang lain mengucilkannya</span>
+                            </button>
+                        </div>
+
+                        <p class="question-feedback mt-4 hidden text-sm leading-relaxed text-[#2a241c] sm:ml-12"></p>
+                    </article>
+
+                    <!-- QUESTION 4 -->
+                    <article class="quiz-card border-b border-[#2a241c]/15 pb-8" data-question="3" data-correct="B">
+
+                        <div class="mb-5 flex items-start gap-4">
+                            <span class="font-instrument text-3xl text-[#2a241c]">04</span>
+
+                            <div>
+                                <p class="mb-2 text-xs uppercase tracking-[0.2em] text-[#2a241c]">
+                                    Landasan Al-Qur'an
+                                </p>
+
+                                <h3 class="text-lg font-medium leading-relaxed text-[#2a241c] sm:text-xl">
+                                    QS. Al-Hujurat [49]: 11–12 mengingatkan agar kita menghindari …
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-3 sm:ml-12">
+                            <button type="button" data-option="A" class="quiz-option">
+                                <span class="option-letter">A</span>
+                                <span>Klarifikasi dan dialog</span>
+                            </button>
+
+                            <button type="button" data-option="B" class="quiz-option">
+                                <span class="option-letter">B</span>
+                                <span>Olok-olok, celaan, prasangka buruk, dan gunjingan</span>
+                            </button>
+
+                            <button type="button" data-option="C" class="quiz-option">
+                                <span class="option-letter">C</span>
+                                <span>Pemeriksaan sumber</span>
+                            </button>
+
+                            <button type="button" data-option="D" class="quiz-option">
+                                <span class="option-letter">D</span>
+                                <span>Sikap adil</span>
+                            </button>
+                        </div>
+
+                        <p class="question-feedback mt-4 hidden text-sm leading-relaxed text-[#2a241c] sm:ml-12"></p>
+                    </article>
+
+                    <!-- QUESTION 5 -->
+                    <article class="quiz-card border-b border-[#2a241c]/15 pb-8" data-question="4" data-correct="D">
+
+                        <div class="mb-5 flex items-start gap-4">
+                            <span class="font-instrument text-3xl text-[#2a241c]">05</span>
+
+                            <div>
+                                <p class="mb-2 text-xs uppercase tracking-[0.2em] text-[#2a241c]">
+                                    Tanggung Jawab
+                                </p>
+
+                                <h3 class="text-lg font-medium leading-relaxed text-[#2a241c] sm:text-xl">
+                                    Jika kamu terlanjur menyebarkan informasi yang ternyata salah, apa langkah
+                                    bertanggung jawab?
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-3 sm:ml-12">
+                            <button type="button" data-option="A" class="quiz-option">
+                                <span class="option-letter">A</span>
+                                <span>Menghapusnya diam-diam tanpa memberi penjelasan</span>
+                            </button>
+
+                            <button type="button" data-option="B" class="quiz-option">
+                                <span class="option-letter">B</span>
+                                <span>Menyalahkan orang pertama yang mengirim</span>
+                            </button>
+
+                            <button type="button" data-option="C" class="quiz-option">
+                                <span class="option-letter">C</span>
+                                <span>Membiarkannya</span>
+                            </button>
+
+                            <button type="button" data-option="D" class="quiz-option">
+                                <span class="option-letter">D</span>
+                                <span>Mengoreksi informasi, menghentikan penyebaran, dan meminta maaf bila ada yang
+                                    dirugikan</span>
+                            </button>
+                        </div>
+
+                        <p class="question-feedback mt-4 hidden text-sm leading-relaxed text-[#2a241c] sm:ml-12"></p>
+                    </article>
+
+                    <!-- SUBMIT QUIZ -->
+                    <div class="flex flex-col items-start justify-between gap-5 pt-4 sm:flex-row sm:items-center">
+                        <p id="quiz-message" class="text-sm text-[#2a241c]">
+                            Jawab semua pertanyaan untuk melihat hasilmu.
+                        </p>
+
+                        <button id="quiz-submit" type="submit"
+                            class="group relative overflow-hidden bg-[#2a241c] px-7 py-4 text-sm text-[#eeeeee] transition-transform duration-300 hover:-translate-y-1">
+
+                            <span class="relative z-10">
+                                Periksa jawaban ↗
+                            </span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- QUIZ RESULT -->
+                <div id="quiz-result" class="mt-10 hidden border border-[#78977c]/40 bg-[#78977c]/10 p-6 sm:p-10">
+
+                    <p class="mb-3 text-xs uppercase tracking-[0.25em] text-[#2a241c]">
+                        Hasil evaluasi
+                    </p>
+
+                    <div class="flex flex-wrap items-end gap-4">
+                        <h3 id="quiz-score" class="font-instrument text-7xl leading-none text-[#2a241c]">
+                            0/5
+                        </h3>
+
+                        <p id="quiz-result-label" class="pb-2 text-sm text-[#2a241c]"></p>
+                    </div>
+
+                    <p id="quiz-result-description" class="mt-5 max-w-2xl text-sm leading-7 text-[#2a241c]"></p>
+
+                    <button id="quiz-retry" type="button"
+                        class="mt-7 border border-[#2a241c]/30 px-5 py-3 text-sm text-[#2a241c] transition-colors hover:bg-[#2a241c] hover:text-[#eeeeee]">
+                        Ulangi kuis ↻
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- REFLECTION SECTION -->
+
+        <section id="reflection-section" aria-labelledby="reflection-title"
+            class="mt-16  mt-10 px-5 pb-20 sm:mt-24 sm:px-10 lg:px-20">
+            <div class="mx-auto max-w-5xl">
+
+                <!-- Header -->
+                <header class="reflection-reveal mb-8 border-b border-[#2a241c]/20 pb-8 sm:mb-10 sm:pb-10">
+                    <p class="mb-4 text-[11px] font-medium uppercase tracking-[0.2em] text-[#2a241c]/65">
+                        Bagian 02 <span class="mx-2">/</span> Introspeksi
+                    </p>
+
+                    <h2 id="reflection-title"
+                        class="font-instrument text-5xl leading-[0.98] tracking-tight text-[#2a241c] sm:text-7xl">
+                        Mari <em>merenung.</em>
+                    </h2>
+
+                    <p class="mt-5 max-w-lg text-sm leading-7 text-[#2a241c]/75 sm:text-base">
+                        Luangkan waktu untuk memikirkan bagaimana kamu menyikapi informasi
+                        dan perbedaan dalam kehidupan sehari-hari.
+                    </p>
+                </header>
+
+                <!-- Questions -->
+                <ol class="divide-y divide-[#2a241c]/20">
+                    <li
+                        class="reflection-card mt-3 grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-7 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-8 sm:py-9">
+                        <span aria-hidden="true"
+                            class="pt-0.5 font-instrument text-2xl leading-none text-[#2a241c]/65 sm:text-3xl">01</span>
+
+                        <div class="min-w-0">
+                            <p class="mb-3 text-[11px] font-medium uppercase tracking-[0.2em] text-[#2a241c]/65">
+                                Mengenali Diri</p>
+                            <h3
+                                class="max-w-3xl text-base font-normal leading-relaxed text-[#2a241c] sm:text-xl sm:leading-[1.7]">
+                                Pernahkah kamu menerima informasi yang membuatmu langsung emosi? Apa yang kamu lakukan
+                                sebelum mempercayainya?
+                            </h3>
+                        </div>
+                    </li>
+
+                    <li
+                        class="reflection-card mt-3 grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-7 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-8 sm:py-9">
+                        <span aria-hidden="true"
+                            class="pt-0.5 font-instrument text-2xl leading-none text-[#2a241c]/65 sm:text-3xl">02</span>
+
+                        <div class="min-w-0">
+                            <p class="mb-3 text-[11px] font-medium uppercase tracking-[0.2em] text-[#2a241c]/65">Menjaga
+                                Akhlak</p>
+                            <h3
+                                class="max-w-3xl text-base font-normal leading-relaxed text-[#2a241c] sm:text-xl sm:leading-[1.7]">
+                                Apa perbedaan antara mengkritik suatu pendapat dan menghina orang yang menyampaikan
+                                pendapat?
+                            </h3>
+                        </div>
+                    </li>
+
+                    <li
+                        class="reflection-card mt-3 grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-7 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-8 sm:py-9">
+                        <span aria-hidden="true"
+                            class="pt-0.5 font-instrument text-2xl leading-none text-[#2a241c]/65 sm:text-3xl">03</span>
+
+                        <div class="min-w-0">
+                            <p class="mb-3 text-[11px] font-medium uppercase tracking-[0.2em] text-[#2a241c]/65">
+                                Membiasakan Tabayyun</p>
+                            <h3
+                                class="max-w-3xl text-base font-normal leading-relaxed text-[#2a241c] sm:text-xl sm:leading-[1.7]">
+                                Tuliskan tiga langkah tabayyun yang akan kamu biasakan saat menggunakan media sosial.
+                            </h3>
+                        </div>
+                    </li>
+
+                    <li
+                        class="reflection-card mt-3 grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-7 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-8 sm:py-9">
+                        <span aria-hidden="true"
+                            class="pt-0.5 font-instrument text-2xl leading-none text-[#2a241c]/65 sm:text-3xl">04</span>
+
+                        <div class="min-w-0">
+                            <p class="mb-3 text-[11px] font-medium uppercase tracking-[0.2em] text-[#2a241c]/65">Menjaga
+                                Toleransi</p>
+                            <h3
+                                class="max-w-3xl text-base font-normal leading-relaxed text-[#2a241c] sm:text-xl sm:leading-[1.7]">
+                                Bagaimana cara menegur teman yang menyebarkan pesan merendahkan tanpa mempermalukannya
+                                di depan umum?
+                            </h3>
+                        </div>
+                    </li>
+                </ol>
+
+                <!-- Footer note -->
+                <p
+                    class="reflection-reveal mt-8 flex max-w-xl items-start gap-3 text-xs leading-6 text-[#2a241c]/65 sm:mt-10 sm:text-sm">
+                    <span aria-hidden="true" class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#2a241c]/60"></span>
+                    Refleksi bukan tentang mencari jawaban yang sempurna, melainkan
+                    membangun kebiasaan untuk berpikir jernih dan bersikap bijak.
+                </p>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- SCRIPTS -->
+    <script type="module" src="./src/js/chapter4.js"></script>
+    <script type="module" src="./src/js/navbar.js"></script>
+    <script type="module" src="./src/js/loading.js"></script>
+
+</body>
+
+</html>

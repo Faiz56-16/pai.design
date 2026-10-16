@@ -18,16 +18,16 @@ const DELAY_AFTER_INTRO = 0.35
 
 document.addEventListener('DOMContentLoaded', () => {
   const intro = document.getElementById('intro');
-  const hasSeenIntro = localStorage.getItem('hasSeenIntro');
+  const hasSeenIntro = sessionStorage.getItem('hasSeenIntro');
 
   if (hasSeenIntro) {
-    // Jika sudah pernah lihat, hilangkan elemen intro langsung
-    intro.remove(); // atau: intro.style.display = 'none';
+    // Kalau sudah pernah lihat di sesi/tab ini, hilangkan intro
+    intro.remove();
   } else {
-    // Jika belum pernah lihat, simpan status ke localStorage
-    localStorage.setItem('hasSeenIntro', 'true');
+    // Simpan status ke sessionStorage untuk sesi ini
+    sessionStorage.setItem('hasSeenIntro', 'true');
 
-    // Kode/fungsi animasi intro Anda berjalan di sini...
+    // Kode/fungsi animasi intro kamu jalan di sini...
   }
 });
 

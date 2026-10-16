@@ -270,4 +270,25 @@ body {
     transform: translateY(-3px) rotate(-45deg);
 }
 /* ULO */
-    
+.menu-description {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.menu-description:first-child {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hover-menu-item {
+    cursor: pointer;
+}
+
+.hover-menu-item.is-active .menu-number {
+    color: #a8c8b8;
+}
+
+.hover-menu-item.is-active span:first-child span {
+    color: #a8c8b8;
+}

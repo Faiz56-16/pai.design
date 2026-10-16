@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menemukan Makna — Islamic Experience</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="bg-[#2a241c] text-[#f4eedf] font-inter selection:bg-[#a8c8b8] selection:text-[#1a1814] overflow-x-hidden">
+
+    <div id="chapter-transition"
+        class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#eeeeee] text-[#242820]">
+        <div class="flex w-full items-center justify-between gap-8 px-8 sm:px-16 lg:px-24">
+            <span class="chapter-number font-serif text-[clamp(7rem,20vw,18rem)] leading-none">
+                VI
+            </span>
+
+            <div class="max-w-xl">
+                <p class="chapter-label mb-5 text-xs tracking-[0.3em]">
+                    CHAPTER / VI
+                </p>
+
+                <h2 class="chapter-title font-serif text-4xl sm:text-6xl lg:text-8xl">
+                    Kelompok
+                </h2>
+
+                <div class="chapter-line mt-8 h-px w-0 bg-[#242820]"></div>
+            </div>
+        </div>
+    </div>
+    <!-- NAVIGASI FIXED -->
+    <nav id="chapter-navigation"
+        class="fixed inset-x-0 bottom-0 z-[100] flex items-center justify-between px-5 pb-6 pt-4 sm:px-10 sm:pb-8">
+
+        <!-- KEMBALI -->
+        <a href="index.html" aria-label="Kembali"
+            class="nav-glass group flex h-12 w-12 items-center justify-center rounded-full text-[#dce9df] transition-all duration-300 hover:-translate-x-1 hover:border-[#a8c8b8]/60 hover:bg-[#a8c8b8]/15 sm:h-14 sm:w-14">
+            <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5">
+                <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </a>
+
+        <!-- BURGER / SKIP CHAPTER -->
+        <button id="chapter-menu-button" type="button" aria-label="Buka daftar chapter" aria-expanded="false"
+            aria-controls="chapter-menu"
+            class="nav-glass group flex h-12 w-12 items-center justify-center rounded-full text-[#dce9df] transition-all duration-300 hover:border-[#a8c8b8]/60 hover:bg-[#a8c8b8]/15 sm:h-14 sm:w-14">
+
+            <span class="relative flex h-4 w-5 flex-col justify-center gap-[5px]">
+                <span id="burger-line-1" class="block h-px w-5 bg-current transition-all duration-300"></span>
+                <span id="burger-line-2" class="block h-px w-3 self-end bg-current transition-all duration-300"></span>
+            </span>
+        </button>
+    </nav>
+
+    <div id="scroll-progress" class="pointer-events-none fixed inset-x-0 top-0 z-[110] h-[3px] bg-[#a8c8b8]"></div>
+    <!-- CHAPTER MENU -->
+    <div id="chapter-menu"
+        class="pointer-events-none fixed bottom-24 right-5 z-[99] w-[min(19rem,calc(100vw-2.5rem))] translate-y-3 rounded-2xl border border-[#a8c8b8]/15 bg-[#1d2921]/80 p-5 text-[#eeeeee] opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-300 sm:bottom-28 sm:right-10">
+
+        <div class="mb-4 border-b border-white/10 pb-4">
+            <h3 class="mt-2 font-instrument text-2xl">
+                Daftar chapter
+            </h3>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="chapter1.html" data-chapter-transition data-chapter="I" data-chapter-title="Permasalahan"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>01 — Permasalahan</span>
+                <span>↗</span>
+            </a>
+
+            <a href="chapter2.html" data-chapter-transition data-chapter="II" data-chapter-title="Konsep PAI"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>02 — Konsep PAI</span>
+                <span>↗</span>
+            </a>
+
+            <a href="chapter3.html" data-chapter-transition data-chapter="III" data-chapter-title="Analisis"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>03 — Analisis</span>
+                <span>↗</span>
+            </a>
+
+            <a href="chapter4.html" data-chapter-transition data-chapter="IV" data-chapter-title="Refleksi"
+                class="chapter-link flex items-center justify-between py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>04 — Refleksi</span>
+                <span>↗</span>
+            </a>
+
+            <a href="chapter5.html" data-chapter-transition data-chapter="V" data-chapter-title="Solusi"
+                class="chapter-link flex items-center justify-between py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>05 — Solusi</span>
+                <span>↗</span>
+            </a>
+            <a href="kelompok.html" data-chapter-transition data-chapter="VI" data-chapter-title="kelompok"
+                class="chapter-link flex items-center justify-between py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>06 — Kelompok</span>
+                <span>↗</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- AMBIENT BACKGROUND GLOW -->
+    <div
+        class="pointer-events-none fixed -right-20 -top-20 z-0 h-[500px] w-[500px] rounded-full bg-[#a8c8b8]/10 blur-[140px]">
+    </div>
+    <div
+        class="pointer-events-none fixed -left-20 top-1/2 z-0 h-[500px] w-[500px] rounded-full bg-[#2f5a45]/20 blur-[140px]">
+    </div>
+
+    <section id="section-hero" class="mt-10 text-center">
+        <h1 class="gsap-hero font-instrument text-[160px] leading-[0.95] tracking-tight text-[#eeeeee]">
+            Pesan yang menjadi konflik.
+        </h1>
+    </section>
+
+    <section id="section-why" class="ml-6 mt-15 space-y-8 p-6">
+        <p class="gsap-why-text font-instrument text-2xl sm:text-4xl lg:text-5xl leading-[1.25] text-[#eeeeee]">
+            Website ini dikembangkan sebagai media pembelajaran Pendidikan Agama Islam yang menghubungkan materi akhlak,
+            tabayyun, toleransi, dan harmonisasi kehidupan sosial dengan situasi yang mungkin ditemui mahasiswa dalam
+            penggunaan media sosial.
+        </p>
+    </section>
+
+    <section id="group-section" class="relative min-h-screen px-6 py-24 text-[#FAF9EE] sm:px-10 sm:py-32 lg:px-20">
+
+        <div class="mx-auto max-w-7xl">
+
+            <div class="mb-12 h-px w-full bg-[#FAF9EE]/20"></div>
+
+            <!-- IDENTITAS KELOMPOK -->
+            <div class="solution-reveal mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+                <div>
+
+                    <h2 class="font-instrument text-4xl sm:text-6xl">
+                        Di balik karya ini.
+                    </h2>
+                </div>
+
+            </div>
+
+            <!-- TABLE -->
+            <div class="solution-reveal">
+                <table class="block w-full border-collapse text-left md:table">
+                    <caption class="sr-only">Pembagian tugas anggota kelompok</caption>
+
+                    <thead class="hidden md:table-header-group">
+                        <tr class="border-y border-[#FAF9EE]/25 text-xs uppercase tracking-[0.18em] text-[#a8c8b8]">
+                            <th scope="col" class="w-[9%] py-5 pr-4 font-medium">No.</th>
+                            <th scope="col" class="w-[32%] px-4 py-5 font-medium">Nama Anggota / NIM</th>
+                            <th scope="col" class="w-[24%] px-4 py-5 font-medium">Tugas</th>
+                            <th scope="col" class="px-4 py-5 font-medium">Bagian yang Dikerjakan</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="block md:table-row-group">
+
+                        <!-- Anggota 1 -->
+                        <tr
+                            class="solution-item group grid grid-cols-[3.5rem_minmax(0,1fr)] gap-y-4 border-b border-[#FAF9EE]/15 py-6 transition-colors duration-500 hover:bg-gradient-to-r hover:from-[#a8c8b8]/[0.08] hover:to-transparent md:table-row md:py-0">
+                            <td
+                                class="font-instrument text-3xl leading-none text-[#a8c8b8]/60 transition-colors duration-500 group-hover:text-[#a8c8b8] md:table-cell md:py-7 md:pr-4 md:align-middle md:text-5xl">
+                                01</td>
+
+                            <td class="md:table-cell md:px-4 md:py-7 md:align-middle">
+                                <span
+                                    class="block font-instrument text-2xl leading-tight text-[#FAF9EE] transition-transform duration-500 ease-out group-hover:translate-x-2 md:text-3xl">Rizqy
+                                    Haryanto</span>
+                                <span
+                                    class="mt-1.5 block text-xs tabular-nums tracking-[0.15em] text-[#FAF9EE]/45">2607</span>
+                            </td>
+
+                            <td data-label="Tugas"
+                                class="col-start-2 before:mb-1.5 before:block before:text-[10px] before:uppercase before:tracking-[0.18em] before:text-[#a8c8b8] before:content-[attr(data-label)] md:before:hidden md:table-cell md:px-4 md:py-7 md:align-middle">
+                                <!-- Saat diisi, hapus border-dashed -->
+                                <span
+                                    class="inline-block rounded-full border border-dashed border-[#a8c8b8]/40 px-3 py-1 text-xs text-[#FAF9EE]/60">Diisi
+                                    kelompok</span>
+                            </td>
+
+                            <td data-label="Bagian yang Dikerjakan"
+                                class="col-start-2 text-sm leading-relaxed text-[#FAF9EE]/60 before:mb-1.5 before:block before:text-[10px] before:uppercase before:tracking-[0.18em] before:text-[#a8c8b8] before:content-[attr(data-label)] md:before:hidden md:table-cell md:px-4 md:py-7 md:align-middle">
+                                Diisi kelompok</td>
+                        </tr>
+
+                        <!-- Anggota 2 -->
+                        <tr
+                            class="solution-item group grid grid-cols-[3.5rem_minmax(0,1fr)] gap-y-4 border-b border-[#FAF9EE]/15 py-6 transition-colors duration-500 hover:bg-gradient-to-r hover:from-[#a8c8b8]/[0.08] hover:to-transparent md:table-row md:py-0">
+                            <td
+                                class="font-instrument text-3xl leading-none text-[#a8c8b8]/60 transition-colors duration-500 group-hover:text-[#a8c8b8] md:table-cell md:py-7 md:pr-4 md:align-middle md:text-5xl">
+                                02</td>
+
+                            <td class="md:table-cell md:px-4 md:py-7 md:align-middle">
+                                <span
+                                    class="block font-instrument text-2xl leading-tight text-[#FAF9EE] transition-transform duration-500 ease-out group-hover:translate-x-2 md:text-3xl">Faiza
+                                    Widana Nursyaban</span>
+                                <span
+                                    class="mt-1.5 block text-xs tabular-nums tracking-[0.15em] text-[#FAF9EE]/45">26071305979</span>
+                            </td>
+
+                            <td data-label="Tugas"
+                                class="col-start-2 before:mb-1.5 before:block before:text-[10px] before:uppercase before:tracking-[0.18em] before:text-[#a8c8b8] before:content-[attr(data-label)] md:before:hidden md:table-cell md:px-4 md:py-7 md:align-middle">
+                                <!-- Saat diisi, hapus border-dashed -->
+                                <span
+                                    class="inline-block rounded-full border border-dashed border-[#a8c8b8]/40 px-3 py-1 text-xs text-[#FAF9EE]/60">Diisi
+                                    kelompok</span>
+                            </td>
+
+                            <td data-label="Bagian yang Dikerjakan"
+                                class="col-start-2 text-sm leading-relaxed text-[#FAF9EE]/60 before:mb-1.5 before:block before:text-[10px] before:uppercase before:tracking-[0.18em] before:text-[#a8c8b8] before:content-[attr(data-label)] md:before:hidden md:table-cell md:px-4 md:py-7 md:align-middle">
+                                Diisi kelompok</td>
+                        </tr>
+
+                        <!-- Anggota 3 -->
+                        <tr
+                            class="solution-item group grid grid-cols-[3.5rem_minmax(0,1fr)] gap-y-4 border-b border-[#FAF9EE]/15 py-6 transition-colors duration-500 hover:bg-gradient-to-r hover:from-[#a8c8b8]/[0.08] hover:to-transparent md:table-row md:py-0">
+                            <td
+                                class="font-instrument text-3xl leading-none text-[#a8c8b8]/60 transition-colors duration-500 group-hover:text-[#a8c8b8] md:table-cell md:py-7 md:pr-4 md:align-middle md:text-5xl">
+                                03</td>
+
+                            <td class="md:table-cell md:px-4 md:py-7 md:align-middle">
+                                <span
+                                    class="block font-instrument text-2xl leading-tight text-[#FAF9EE] transition-transform duration-500 ease-out group-hover:translate-x-2 md:text-3xl">Yola Fransiska</span>
+                                <span
+                                    class="mt-1.5 block text-xs tabular-nums tracking-[0.15em] text-[#FAF9EE]/45">26011206872</span>
+                            </td>
+
+                            <td data-label="Tugas"
+                                class="col-start-2 before:mb-1.5 before:block before:text-[10px] before:uppercase before:tracking-[0.18em] before:text-[#a8c8b8] before:content-[attr(data-label)] md:before:hidden md:table-cell md:px-4 md:py-7 md:align-middle">
+                                <!-- Saat diisi, hapus border-dashed -->
+                                <span
+                                    class="inline-block rounded-full border border-dashed border-[#a8c8b8]/40 px-3 py-1 text-xs text-[#FAF9EE]/60">Diisi
+                                    kelompok</span>
+                            </td>
+
+                            <td data-label="Bagian yang Dikerjakan"
+                                class="col-start-2 text-sm leading-relaxed text-[#FAF9EE]/60 before:mb-1.5 before:block before:text-[10px] before:uppercase before:tracking-[0.18em] before:text-[#a8c8b8] before:content-[attr(data-label)] md:before:hidden md:table-cell md:px-4 md:py-7 md:align-middle">
+                                Diisi kelompok</td>
+                        </tr>
+
+                        <!-- Anggota 4 -->
+                        <tr
+                            class="solution-item group grid grid-cols-[3.5rem_minmax(0,1fr)] gap-y-4 border-b border-[#FAF9EE]/15 py-6 transition-colors duration-500 hover:bg-gradient-to-r hover:from-[#a8c8b8]/[0.08] hover:to-transparent md:table-row md:py-0">
+                            <td
+                                class="font-instrument text-3xl leading-none text-[#a8c8b8]/60 transition-colors duration-500 group-hover:text-[#a8c8b8] md:table-cell md:py-7 md:pr-4 md:align-middle md:text-5xl">
+                                04</td>
+
+                            <td class="md:table-cell md:px-4 md:py-7 md:align-middle">
+                                <span
+                                    class="block font-instrument text-2xl leading-tight text-[#FAF9EE] transition-transform duration-500 ease-out group-hover:translate-x-2 md:text-3xl">Raisya Chayyara
+                                    </span>
+                                <span
+                                    class="mt-1.5 block text-xs tabular-nums tracking-[0.15em] text-[#FAF9EE]/45">26021100460</span>
+                            </td>
+
+                            <td data-label="Tugas"
+                                class="col-start-2 before:mb-1.5 before:block before:text-[10px] before:uppercase before:tracking-[0.18em] before:text-[#a8c8b8] before:content-[attr(data-label)] md:before:hidden md:table-cell md:px-4 md:py-7 md:align-middle">
+                                <!-- Saat diisi, hapus border-dashed -->
+                                <span
+                                    class="inline-block rounded-full border border-dashed border-[#a8c8b8]/40 px-3 py-1 text-xs text-[#FAF9EE]/60">Diisi
+                                    kelompok</span>
+                            </td>
+
+                            <td data-label="Bagian yang Dikerjakan"
+                                class="col-start-2 text-sm leading-relaxed text-[#FAF9EE]/60 before:mb-1.5 before:block before:text-[10px] before:uppercase before:tracking-[0.18em] before:text-[#a8c8b8] before:content-[attr(data-label)] md:before:hidden md:table-cell md:px-4 md:py-7 md:align-middle">
+                                Diisi kelompok</td>
+                        </tr>
+
+                        <!-- Anggota 5 -->
+                        <tr
+                            class="solution-item group grid grid-cols-[3.5rem_minmax(0,1fr)] gap-y-4 border-b border-[#FAF9EE]/15 py-6 transition-colors duration-500 hover:bg-gradient-to-r hover:from-[#a8c8b8]/[0.08] hover:to-transparent md:table-row md:py-0">
+                            <td
+                                class="font-instrument text-3xl leading-none text-[#a8c8b8]/60 transition-colors duration-500 group-hover:text-[#a8c8b8] md:table-cell md:py-7 md:pr-4 md:align-middle md:text-5xl">
+                                05</td>
+
+                            <td class="md:table-cell md:px-4 md:py-7 md:align-middle">
+                                <span
+                                    class="block font-instrument text-2xl leading-tight text-[#FAF9EE] transition-transform duration-500 ease-out group-hover:translate-x-2 md:text-3xl">Azzahra Dulanov
+                                    </span>
+                                <span
+                                    class="mt-1.5 block text-xs tabular-nums tracking-[0.15em] text-[#FAF9EE]/45">26061104847</span>
+                            </td>
+
+                            <td data-label="Tugas"
+                                class="col-start-2 before:mb-1.5 before:block before:text-[10px] before:uppercase before:tracking-[0.18em] before:text-[#a8c8b8] before:content-[attr(data-label)] md:before:hidden md:table-cell md:px-4 md:py-7 md:align-middle">
+                                <!-- Saat diisi, hapus border-dashed -->
+                                <span
+                                    class="inline-block rounded-full border border-dashed border-[#a8c8b8]/40 px-3 py-1 text-xs text-[#FAF9EE]/60">Diisi
+                                    kelompok</span>
+                            </td>
+
+                            <td data-label="Bagian yang Dikerjakan"
+                                class="col-start-2 text-sm leading-relaxed text-[#FAF9EE]/60 before:mb-1.5 before:block before:text-[10px] before:uppercase before:tracking-[0.18em] before:text-[#a8c8b8] before:content-[attr(data-label)] md:before:hidden md:table-cell md:px-4 md:py-7 md:align-middle">
+                                Diisi kelompok</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- FOOTER NOTE -->
+            <div
+                class="solution-reveal mt-16 flex flex-col gap-5 border-t border-[#FAF9EE]/20 pt-8 sm:flex-row sm:items-start sm:justify-between">
+                <p class="max-w-xl font-instrument text-2xl italic leading-snug text-[#FAF9EE]/80 sm:text-3xl">
+                    "Menyaring informasi adalah langkah kecil untuk menjaga ruang sosial tetap harmonis."
+                </p>
+
+                <span class="text-xs uppercase tracking-[0.2em] text-[#a8c8b8]">
+                    Pendidikan Agama Islam
+                </span>
+            </div>
+
+        </div>
+    </section>
+    <script type="module" src="./src/js/chapter5.js"></script>
+    <script type="module" src="./src/js/navbar.js"></script>
+    <script type="module" src="./src/js/loading.js"></script>
+</body>
+
+</html>

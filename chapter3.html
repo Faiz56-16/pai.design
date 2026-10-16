@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menemukan Makna — Islamic Experience</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="bg-[#2a241c] text-[#f4eedf] font-inter selection:bg-[#a8c8b8] selection:text-[#1a1814] overflow-x-hidden">
+
+    <div id="chapter-transition"
+        class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#eeeeee] text-[#242820]">
+        <div class="flex w-full items-center justify-between gap-8 px-8 sm:px-16 lg:px-24">
+            <span class="chapter-number font-serif text-[clamp(7rem,20vw,18rem)] leading-none">
+                III
+            </span>
+
+            <div class="max-w-xl">
+                <p class="chapter-label mb-5 text-xs tracking-[0.3em]">
+                    CHAPTER / III
+                </p>
+
+                <h2 class="chapter-title font-serif text-4xl sm:text-6xl lg:text-8xl">
+                    Analisis
+                </h2>
+
+                <div class="chapter-line mt-8 h-px w-0 bg-[#242820]"></div>
+            </div>
+        </div>
+    </div>
+    <!-- NAVIGASI FIXED -->
+    <nav id="chapter-navigation"
+        class="fixed inset-x-0 bottom-0 z-[100] flex items-center justify-between px-5 pb-6 pt-4 sm:px-10 sm:pb-8">
+
+        <!-- KEMBALI -->
+        <a href="index.html" aria-label="Kembali"
+            class="nav-glass group flex h-12 w-12 items-center justify-center rounded-full text-[#dce9df] transition-all duration-300 hover:-translate-x-1 hover:border-[#a8c8b8]/60 hover:bg-[#a8c8b8]/15 sm:h-14 sm:w-14">
+            <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5">
+                <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </a>
+
+        <!-- NEXT CHAPTER -->
+        <a href="chapter4.html" data-chapter-transition data-chapter="IV" data-chapter-title="Latihan"
+            class="nav-next group relative inline-flex items-center gap-5 overflow-hidden rounded-full px-6 py-4 text-xs font-medium tracking-wide text-[#20352a] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(168,200,184,0.2)] sm:px-8">
+            <span class="absolute inset-0 bg-[#eeeeee] transition-colors duration-500 group-hover:bg-[#9AB17A]"></span>
+
+            <span class="text-[#2a241c] relative">Lanjutkan perjalanan</span>
+        </a>
+        <!-- BURGER / SKIP CHAPTER -->
+        <button id="chapter-menu-button" type="button" aria-label="Buka daftar chapter" aria-expanded="false"
+            aria-controls="chapter-menu"
+            class="nav-glass group flex h-12 w-12 items-center justify-center rounded-full text-[#dce9df] transition-all duration-300 hover:border-[#a8c8b8]/60 hover:bg-[#a8c8b8]/15 sm:h-14 sm:w-14">
+
+            <span class="relative flex h-4 w-5 flex-col justify-center gap-[5px]">
+                <span id="burger-line-1" class="block h-px w-5 bg-current transition-all duration-300"></span>
+                <span id="burger-line-2" class="block h-px w-3 self-end bg-current transition-all duration-300"></span>
+            </span>
+        </button>
+    </nav>
+
+    <div id="scroll-progress" class="pointer-events-none fixed inset-x-0 top-0 z-[110] h-[3px] bg-[#a8c8b8]"></div>
+    <!-- CHAPTER MENU -->
+
+    <div id="chapter-menu"
+        class="pointer-events-none fixed bottom-24 right-5 z-[99] w-[min(19rem,calc(100vw-2.5rem))] translate-y-3 rounded-2xl border border-[#a8c8b8]/15 bg-[#1d2921]/80 p-5 text-[#2a241c] opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-300 sm:bottom-28 sm:right-10">
+        <div class="mb-4 border-b border-white/10 pb-4">
+            <h3 class="text-[#eeeeee] mt-2 font-instrument text-2xl">
+                Daftar chapter
+            </h3>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="chapter1.html" data-chapter-transition data-chapter="I" data-chapter-title="Permasalahan"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#2a241c]">
+                <span>01 — Permasalahan</span>
+                <span>↗</span>
+            </a>
+
+            <a href="chapter2.html" data-chapter-transition data-chapter="II" data-chapter-title="Konsep PAI"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#2a241c]">
+                <span>02 — Konsep PAI</span>
+                <span>↗</span>
+            </a>
+
+            <a href="chapter3.html" data-chapter-transition data-chapter="III" data-chapter-title="Analisis"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#2a241c]">
+                <span>03 — Toleransi</span>
+                <span>↗</span>
+            </a>
+
+
+            <a href="chapter4.html" data-chapter-transition data-chapter="IV" data-chapter-title="Refleksi"
+                class="chapter-link flex items-center justify-between py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>04 — Refleksi</span>
+                <span>↗</span>
+            </a>
+              <a href="chapter5.html" data-chapter-transition data-chapter="VI" data-chapter-title="Solusi"
+                class="chapter-link flex items-center justify-between py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>05 — Solusi</span>
+                <span>↗</span>
+            </a>
+            <a href="kelompok.html" data-chapter-transition data-chapter="VI" data-chapter-title="kelompok"
+                class="chapter-link flex items-center justify-between py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>06 — Kelompok</span>
+                <span>↗</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- AMBIENT BACKGROUND GLOW -->
+    <div
+        class="pointer-events-none fixed -right-20 -top-20 z-0 h-[500px] w-[500px] rounded-full bg-[#a8c8b8]/10 blur-[140px]">
+    </div>
+    <div
+        class="pointer-events-none fixed -left-20 top-1/2 z-0 h-[500px] w-[500px] rounded-full bg-[#2f5a45]/20 blur-[140px]">
+    </div>
+
+    <main id="problem" class="relative z-10 py-16 lg:py-24 space-y-32 sm:space-y-44">
+
+        <!-- ================= SECTION 1: HERO ================= -->
+        <section id="section-hero" class="text-center">
+            <h1 class="gsap-hero font-instrument text-[160px] leading-[0.95] tracking-tight text-[#eeeeee]">
+                Analisis Kasus
+            </h1>
+        </section>
+
+        <!-- ================= SECTION 5: WHY IT MATTERS ================= -->
+        <section id="section-why" class="space-y-8 p-6">
+            <p class="gsap-why-text font-instrument text-2xl sm:text-4xl lg:text-5xl leading-[1.25] text-[#eeeeee]">
+                Penyebaran tangkapan layar yang belum terverifikasi berkaitan dengan prinsip tabayyun dalam QS.
+                Al-Hujurat [49]: 6. Komentar yang merendahkan kelompok lain bertentangan dengan pedoman menjaga
+                kehormatan dalam QS. Al-Hujurat [49]: 11–12. Konflik yang membesar juga berlawanan dengan tujuan akhlak
+                dan harmonisasi kehidupan sosial yang ditekankan dalam RPS.
+            </p>
+        </section>
+
+        <section id="nilai-islam" class="w-full px-6">
+
+            <!-- HEADING -->
+            <h1 class="gsap-hero p-6 font-instrument text-[30px] leading-[0.95] tracking-tight text-[#eeeeee]">
+                Nilai Islam yang dapat diterapkan
+            </h1>
+            <!-- ITEM 1 -->
+            <div class="hover-menu-item group relative flex min-h-[130px] cursor-pointer items-center justify-center overflow-hidden border-b border-[#eeeeee]/50 px-4 py-6 sm:min-h-[170px] lg:min-h-[190px]"
+                data-image="./src/assets/img/internet.jpg">
+
+                <div
+                    class="menu-title relative z-10 flex flex-wrap items-center justify-center gap-x-3 font-instrument text-[clamp(2.5rem,8.5vw,8rem)] leading-[0.9] tracking-[-0.055em]">
+                    <span>Tabayyun</span>
+
+                    <span class="menu-image-wrap relative inline-flex h-[0.65em] w-[1.25em] shrink-0 overflow-hidden">
+                        <img src="./src/assets/img/internet.jpg" alt="" class="menu-image h-full w-full object-cover">
+                    </span>
+                </div>
+            </div>
+
+            <!-- ITEM 2 -->
+            <div class="hover-menu-item group relative flex min-h-[130px] cursor-pointer items-center justify-center overflow-hidden border-b border-[#eeeeee]/50 px-4 py-6 sm:min-h-[170px] lg:min-h-[190px]"
+                data-image="./src/assets/img/chap-3c.jpg">
+
+                <div
+                    class="menu-title relative z-10 flex flex-wrap items-center justify-center gap-x-3 font-instrument text-[clamp(2.5rem,8.5vw,8rem)] leading-[0.9] tracking-[-0.055em]">
+                    <span class="menu-image-wrap relative inline-flex h-[0.65em] w-[1.25em] shrink-0 overflow-hidden">
+                        <img src="./src/assets/img/chap-3c.jpg" alt="" class="menu-image h-full w-full object-cover">
+                    </span>
+
+                    <span>Amanah</span>
+                </div>
+            </div>
+
+            <!-- ITEM 3 -->
+            <div class="hover-menu-item group relative flex min-h-[130px] cursor-pointer items-center justify-center overflow-hidden border-b border-[#eeeeee]/50 px-4 py-6 sm:min-h-[170px] lg:min-h-[190px]"
+                data-image="./src/assets/img/chap-3b.jpg">
+
+                <div
+                    class="menu-title relative z-10 flex flex-wrap items-center justify-center gap-x-3 font-instrument text-[clamp(2.5rem,8.5vw,8rem)] leading-[0.9] tracking-[-0.055em]">
+                    <span>Akhlak</span>
+
+                    <span class="menu-image-wrap relative inline-flex h-[0.65em] w-[1.25em] shrink-0 overflow-hidden">
+                        <img src="./src/assets/img/chap-3b.jpg" alt="" class="menu-image h-full w-full object-cover">
+                    </span>
+
+                    <span>Adab</span>
+                </div>
+            </div>
+
+            <!-- ITEM 4 -->
+            <div class="hover-menu-item group relative flex min-h-[130px] cursor-pointer items-center justify-center overflow-hidden border-b border-[#eeeeee]/50 px-4 py-6 sm:min-h-[170px] lg:min-h-[190px]"
+                data-image="./src/assets/img/chap-3a.jpg">
+
+                <div
+                    class="menu-title relative z-10 flex flex-wrap items-center justify-center gap-x-3 font-instrument text-[clamp(2.5rem,8.5vw,8rem)] leading-[0.9] tracking-[-0.055em]">
+                    <span>Toleransi</span>
+
+                    <span class="menu-image-wrap relative inline-flex h-[0.65em] w-[1.25em] shrink-0 overflow-hidden">
+                        <img src="./src/assets/img/chap-3a.jpg" alt="" class="menu-image h-full w-full object-cover">
+                    </span>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="nilai-islam" class="w-full overflow-hidden px-6 py-16">
+
+            <!-- JUDUL SECTION -->
+            <div class="mb-10 flex items-end justify-between pb-4">
+                <p class="font-sans text-xs uppercase tracking-[0.25em] text-[#a8c8b8]">
+                    Mudharat
+                </p>
+            </div>
+
+            <!-- 4 TITLE -->
+            <div class="space-y-5 sm:space-y-8">
+
+                <h2
+                    class="value-title font-instrument text-[clamp(2.5rem,8vw,7rem)] leading-[0.95] tracking-tight text-[#eeeeee]">
+                    1. Memeriksa sumber dan menunda penyebaran
+                </h2>
+
+                <h2
+                    class="value-title text-right font-instrument text-[clamp(2.5rem,8vw,7rem)] leading-[0.95] tracking-tight text-[#eeeeee]">
+                    Meneruskan pesan karena ikut emosi .2
+                </h2>
+
+                <h2
+                    class="value-title font-instrument text-[clamp(2.5rem,8vw,7rem)] leading-[0.95] tracking-tight text-[#eeeeee]">
+                    3. Menghina atau menyerang kelompok tertentu
+                </h2>
+
+                <h2
+                    class="value-title text-right font-instrument text-[clamp(2.5rem,8vw,7rem)] leading-[0.95] tracking-tight text-[#eeeeee]">
+                    Meminta klarifikasi dengan santun .4
+                </h2>
+
+            </div>
+
+        </section>
+
+        <section id="section-why" class="space-y-8 p-6">
+            <p class="gsap-why-text font-instrument text-2xl sm:text-4xl lg:text-5xl leading-[1.25] text-[#eeeeee]">
+                Tindakan yang paling bertanggung jawab adalah tidak menyebarkan pesan sebelum terverifikasi, memeriksa
+                sumber, menghindari komentar menyerang, dan mengupayakan klarifikasi. Jika informasi terbukti keliru,
+                penyebar perlu mengoreksi pesan secara terbuka dan meminta maaf kepada pihak yang dirugikan.
+            </p>
+        </section>
+
+    </main>
+
+    <script type="module" src="./src/js/chapter3.js"></script>
+    <script type="module" src="./src/js/navbar.js"></script>
+    <script type="module" src="./src/js/loading.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Solusi dan Aksi — Islamic Experience</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="overflow-x-hidden bg-[#FAF9EE] font-inter text-[#2a241c] selection:bg-[#a8c8b8] selection:text-[#2a241c]">
+
+    <!-- CHAPTER TRANSITION -->
+    <div id="chapter-transition"
+        class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#eeeeee] text-[#2a241c]">
+
+        <div class="flex w-full items-center justify-between gap-8 px-8 sm:px-16 lg:px-24">
+            <span class="chapter-number font-serif text-[clamp(7rem,20vw,18rem)] leading-none">
+                V
+            </span>
+
+            <div class="max-w-xl">
+                <p class="chapter-label mb-5 text-xs tracking-[0.3em]">
+                    CHAPTER / V
+                </p>
+
+                <h2 class="chapter-title font-serif text-4xl sm:text-6xl lg:text-8xl">
+                    Solusi
+                </h2>
+
+                <div class="chapter-line mt-8 h-px w-0 bg-[#2a241c]"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIXED NAVIGATION -->
+    <nav id="chapter-navigation"
+        class="fixed inset-x-0 bottom-0 z-[100] flex items-center justify-between px-5 pb-6 pt-4 sm:px-10 sm:pb-8">
+
+        <!-- BACK -->
+        <a href="index.html" aria-label="Kembali"
+            class="nav-glass group flex h-12 w-12 items-center justify-center rounded-full text-[#2a241c] transition-all duration-300 hover:-translate-x-1 hover:border-[#a8c8b8]/60 hover:bg-[#a8c8b8]/15 sm:h-14 sm:w-14">
+
+            <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5">
+                <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </a>
+
+        <a href="Kelompok.html" data-chapter-transition data-chapter="VI" data-chapter-title="Kelompok"
+            class="nav-next group relative inline-flex items-center gap-5 overflow-hidden rounded-full px-6 py-4 text-xs font-medium tracking-wide text-[#2a241c] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(168,200,184,0.2)] sm:px-8">
+
+            <span class="absolute inset-0 bg-[#2a241c] transition-colors duration-500 group-hover:bg-[#9AB17A]"></span>
+
+            <span class="relative z-10 text-[#eeeeee]">
+                Lanjutkan perjalanan
+            </span>
+        </a>
+
+        <!-- CHAPTER MENU BUTTON -->
+        <button id="chapter-menu-button" type="button" aria-label="Buka daftar chapter" aria-expanded="false"
+            aria-controls="chapter-menu"
+            class="nav-glass group flex h-12 w-12 items-center justify-center rounded-full text-[#2a241c] transition-all duration-300 hover:border-[#a8c8b8]/60 hover:bg-[#a8c8b8]/15 sm:h-14 sm:w-14">
+
+            <span class="relative flex h-4 w-5 flex-col justify-center gap-[5px]">
+                <span id="burger-line-1" class="block h-px w-5 bg-current transition-all duration-300"></span>
+                <span id="burger-line-2" class="block h-px w-3 self-end bg-current transition-all duration-300"></span>
+            </span>
+        </button>
+    </nav>
+
+    <!-- SCROLL PROGRESS -->
+    <div id="scroll-progress" class="pointer-events-none fixed inset-x-0 top-0 z-[110] h-[3px] bg-[#a8c8b8]"></div>
+
+    <!-- CHAPTER MENU -->
+    <div id="chapter-menu"
+        class="pointer-events-none fixed bottom-24 right-5 z-[99] w-[min(19rem,calc(100vw-2.5rem))] translate-y-3 rounded-2xl border border-[#a8c8b8]/15 bg-[#1d2921]/90 p-5 opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-300 sm:bottom-28 sm:right-10">
+
+        <div class="mb-4 border-b border-white/10 pb-4">
+            <h3 class="mt-2 font-instrument text-2xl text-[#eeeeee]">
+                Daftar chapter
+            </h3>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="chapter1.html" data-chapter-transition data-chapter="I" data-chapter-title="Permasalahan"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/80 transition-colors hover:text-[#a8c8b8]">
+                <span>01 — Permasalahan</span>
+                <span>↗</span>
+            </a>
+
+            <a href="chapter2.html" data-chapter-transition data-chapter="II" data-chapter-title="Konsep PAI"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/80 transition-colors hover:text-[#a8c8b8]">
+                <span>02 — Konsep PAI</span>
+                <span>↗</span>
+            </a>
+
+            <a href="chapter3.html" data-chapter-transition data-chapter="III" data-chapter-title="Analisis"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/80 transition-colors hover:text-[#a8c8b8]">
+                <span>03 — Analisis</span>
+                <span>↗</span>
+            </a>
+
+            <a href="chapter4.html" data-chapter-transition data-chapter="IV" data-chapter-title="Refleksi"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>04 — Refleksi</span>
+                <span>↗</span>
+            </a>
+            <a href="chapter5.html" data-chapter-transition data-chapter="V" data-chapter-title="Solusi"
+                class="chapter-link flex items-center justify-between border-b border-white/10 py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>05 — Solusi</span>
+                <span>↗</span>
+            </a>
+
+            <a href="kelompok.html" data-chapter-transition data-chapter="VI" data-chapter-title="Kelompok"
+                class="chapter-link flex items-center justify-between py-3 text-sm text-[#eeeeee]/70 transition-colors hover:text-[#c6d9ca]">
+                <span>06 — Kelompok</span>
+                <span>↗</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- AMBIENT BACKGROUND -->
+    <div
+        class="pointer-events-none fixed -right-20 -top-20 z-0 h-[500px] w-[500px] rounded-full bg-[#a8c8b8]/10 blur-[140px]">
+    </div>
+    <div
+        class="pointer-events-none fixed -left-20 top-1/2 z-0 h-[500px] w-[500px] rounded-full bg-[#2f5a45]/15 blur-[140px]">
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="relative z-10">
+
+        <section id="solution-section" class="px-5 pb-32 pt-24 sm:px-10 sm:pt-32 lg:px-20">
+            <div class="mx-auto max-w-5xl">
+
+                <!-- HEADER -->
+                <div class="solution-reveal mb-12 border-b border-[#2a241c]/20 pb-8 sm:mb-16 sm:pb-10">
+                    <h1
+                        class="font-instrument text-5xl leading-[0.98] tracking-tight text-[#2a241c] sm:text-7xl lg:text-8xl">
+                        Dari sadar <i>ke aksi.</i>
+                    </h1>
+
+                    <p class="mt-5 max-w-xl text-sm leading-7 text-[#2a241c]/75 sm:text-base">
+                        Sikap bijak dimulai dari keputusan kecil. Kenali langkah yang bisa
+                        kamu lakukan untuk menghadapi informasi dan perbedaan secara bertanggung jawab.
+                    </p>
+                </div>
+
+                <!-- 01 / SOLUSI YANG DISARANKAN -->
+                <div class="mb-16 sm:mb-20">
+
+                    <div class="solution-reveal mb-6 flex items-end justify-between gap-4 sm:mb-8">
+                        <div>
+                            <h2 class="font-instrument text-3xl leading-tight text-[#2a241c] sm:text-4xl">
+                                Solusi yang disarankan
+                            </h2>
+                        </div>
+
+                        <span class="hidden text-xs text-[#2a241c]/50 sm:block">06 langkah</span>
+                    </div>
+
+                    <div class="divide-y divide-[#2a241c]/20 border-y border-[#2a241c]/20">
+
+                        <div
+                            class="solution-item grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-6 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-8 sm:py-7">
+                            <span class="font-instrument text-2xl leading-none text-[#2a241c]/55 sm:text-3xl">01</span>
+                            <div>
+                                <h3 class="mb-2 text-base font-medium sm:text-lg">Berhenti sejenak</h3>
+                                <p class="max-w-3xl text-sm leading-7 text-[#2a241c]/75 sm:text-base">
+                                    Beri dirimu waktu sebelum bereaksi, terutama ketika pesan memancing kemarahan atau
+                                    emosi.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="solution-item grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-6 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-8 sm:py-7">
+                            <span class="font-instrument text-2xl leading-none text-[#2a241c]/55 sm:text-3xl">02</span>
+                            <div>
+                                <h3 class="mb-2 text-base font-medium sm:text-lg">Lakukan tabayyun</h3>
+                                <p class="max-w-3xl text-sm leading-7 text-[#2a241c]/75 sm:text-base">
+                                    Telusuri sumber asli, konteks, tanggal, serta bandingkan informasi dengan sumber
+                                    lain yang tepercaya.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="solution-item grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-6 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-8 sm:py-7">
+                            <span class="font-instrument text-2xl leading-none text-[#2a241c]/55 sm:text-3xl">03</span>
+                            <div>
+                                <h3 class="mb-2 text-base font-medium sm:text-lg">Hentikan penyebaran</h3>
+                                <p class="max-w-3xl text-sm leading-7 text-[#2a241c]/75 sm:text-base">
+                                    Jangan meneruskan pesan yang belum jelas, memuat data pribadi, atau berisi tuduhan
+                                    yang belum terbukti.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="solution-item grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-6 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-8 sm:py-7">
+                            <span class="font-instrument text-2xl leading-none text-[#2a241c]/55 sm:text-3xl">04</span>
+                            <div>
+                                <h3 class="mb-2 text-base font-medium sm:text-lg">Sampaikan dengan santun</h3>
+                                <p class="max-w-3xl text-sm leading-7 text-[#2a241c]/75 sm:text-base">
+                                    Ungkapkan ketidaksetujuan dengan sopan. Bahas isi pernyataan, bukan menyerang
+                                    identitas orang yang menyampaikannya.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="solution-item grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-6 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-8 sm:py-7">
+                            <span class="font-instrument text-2xl leading-none text-[#2a241c]/55 sm:text-3xl">05</span>
+                            <div>
+                                <h3 class="mb-2 text-base font-medium sm:text-lg">Selesaikan konflik dengan aman</h3>
+                                <p class="max-w-3xl text-sm leading-7 text-[#2a241c]/75 sm:text-base">
+                                    Dorong klarifikasi yang adil. Jika situasinya serius, libatkan dosen pembimbing atau
+                                    pihak kampus yang berwenang.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="solution-item grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-6 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-8 sm:py-7">
+                            <span class="font-instrument text-2xl leading-none text-[#2a241c]/55 sm:text-3xl">06</span>
+                            <div>
+                                <h3 class="mb-2 text-base font-medium sm:text-lg">Koreksi informasi yang salah</h3>
+                                <p class="max-w-3xl text-sm leading-7 text-[#2a241c]/75 sm:text-base">
+                                    Jika terlanjur membagikan informasi keliru, sampaikan koreksi di ruang yang sama
+                                    agar penerima pesan juga mengetahuinya.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 02 / AKSI NYATA MAHASISWA -->
+                <div class="mb-16 sm:mb-20">
+
+                    <div class="solution-reveal mb-6 sm:mb-8">
+                        <h2 class="font-instrument text-3xl leading-tight sm:text-4xl">
+                            Aksi nyata mahasiswa
+                        </h2>
+
+                        <p class="mt-4 max-w-xl text-sm leading-7 text-[#2a241c]/70 sm:text-base">
+                            Mulai dari kebiasaan sederhana yang bisa diterapkan setiap hari,
+                            baik di lingkungan kampus maupun ruang digital.
+                        </p>
+                    </div>
+
+                    <div class="grid gap-px border border-[#2a241c]/20 bg-[#2a241c]/20 sm:grid-cols-2">
+
+                        <div class="solution-action bg-[#FAF9EE] p-5 sm:p-7">
+                            <span
+                                class="mb-5 flex h-8 w-8 items-center justify-center border border-[#2a241c]/25 font-instrument text-lg">01</span>
+                            <p class="text-sm leading-7 sm:text-base">
+                                Biasakan memeriksa sumber sebelum menekan tombol bagikan.
+                            </p>
+                        </div>
+
+                        <div class="solution-action bg-[#FAF9EE] p-5 sm:p-7">
+                            <span
+                                class="mb-5 flex h-8 w-8 items-center justify-center border border-[#2a241c]/25 font-instrument text-lg">02</span>
+                            <p class="text-sm leading-7 sm:text-base">
+                                Gunakan bahasa yang santun di grup kelas dan media sosial.
+                            </p>
+                        </div>
+
+                        <div class="solution-action bg-[#FAF9EE] p-5 sm:p-7">
+                            <span
+                                class="mb-5 flex h-8 w-8 items-center justify-center border border-[#2a241c]/25 font-instrument text-lg">03</span>
+                            <p class="text-sm leading-7 sm:text-base">
+                                Jangan ikut menyebarkan hinaan, olok-olok, atau serangan terhadap kelompok tertentu.
+                            </p>
+                        </div>
+
+                        <div class="solution-action bg-[#FAF9EE] p-5 sm:p-7">
+                            <span
+                                class="mb-5 flex h-8 w-8 items-center justify-center border border-[#2a241c]/25 font-instrument text-lg">04</span>
+                            <p class="text-sm leading-7 sm:text-base">
+                                Ingatkan teman secara baik-baik jika ada pesan yang berpotensi merugikan orang lain.
+                            </p>
+                        </div>
+
+                        <div class="solution-action bg-[#FAF9EE] p-5 sm:col-span-2 sm:p-7">
+                            <span
+                                class="mb-5 flex h-8 w-8 items-center justify-center border border-[#2a241c]/25 font-instrument text-lg">05</span>
+                            <p class="max-w-2xl text-sm leading-7 sm:text-base">
+                                Bangun diskusi yang menghargai perbedaan dan berorientasi pada solusi.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 03 / HAL YANG HARUS DIHINDARI -->
+                <div>
+
+                    <div class="solution-reveal mb-6 sm:mb-8">
+                        <h2 class="font-instrument text-3xl leading-tight sm:text-4xl">
+                            Hal yang harus dihindari
+                        </h2>
+
+                        <p class="mt-4 max-w-xl text-sm leading-7 text-[#2a241c]/70 sm:text-base">
+                            Menjaga ruang digital yang sehat juga berarti mengetahui tindakan yang sebaiknya tidak kita
+                            lakukan.
+                        </p>
+                    </div>
+
+                    <div class="divide-y divide-[#2a241c]/20 border-y border-[#2a241c]/20">
+
+                        <div
+                            class="solution-warning grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-5 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-8 sm:py-6">
+                            <span class="font-instrument text-xl text-[#2a241c]/45 sm:text-2xl">01</span>
+                            <p class="text-sm leading-7 sm:text-base">
+                                Menyebarkan kabar hanya karena sedang viral.
+                            </p>
+                        </div>
+
+                        <div
+                            class="solution-warning grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-5 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-8 sm:py-6">
+                            <span class="font-instrument text-xl text-[#2a241c]/45 sm:text-2xl">02</span>
+                            <p class="text-sm leading-7 sm:text-base">
+                                Menganggap tangkapan layar sebagai bukti lengkap tanpa memeriksa konteks.
+                            </p>
+                        </div>
+
+                        <div
+                            class="solution-warning grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-5 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-8 sm:py-6">
+                            <span class="font-instrument text-xl text-[#2a241c]/45 sm:text-2xl">03</span>
+                            <p class="text-sm leading-7 sm:text-base">
+                                Menghina, mengancam, mempermalukan, atau melakukan perundungan digital.
+                            </p>
+                        </div>
+
+                        <div
+                            class="solution-warning grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-5 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-8 sm:py-6">
+                            <span class="font-instrument text-xl text-[#2a241c]/45 sm:text-2xl">04</span>
+                            <p class="text-sm leading-7 sm:text-base">
+                                Menyimpulkan kesalahan seseorang sebelum informasi cukup jelas.
+                            </p>
+                        </div>
+
+                        <div
+                            class="solution-warning grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-5 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-8 sm:py-6">
+                            <span class="font-instrument text-xl text-[#2a241c]/45 sm:text-2xl">05</span>
+                            <p class="text-sm leading-7 sm:text-base">
+                                Membalas kesalahan dengan tindakan yang sama-sama merugikan.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CLOSING -->
+                <div class="solution-reveal mt-12 border-t border-[#2a241c]/20 pt-7 sm:mt-16 sm:pt-9">
+                    <p class="max-w-3xl font-instrument text-2xl leading-snug sm:text-4xl">
+                        “Berpikir sebelum membagikan, menghormati sebelum menanggapi,
+                        dan mengoreksi sebelum menyimpulkan.”
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SCRIPTS -->
+    <script type="module" src="./src/js/chapter5.js"></script>
+    <script type="module" src="./src/js/navbar.js"></script>
+    <script type="module" src="./src/js/loading.js"></script>
+
+</body>
+
+</html>
